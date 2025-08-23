@@ -1,5 +1,11 @@
 .firstView {
   display: flex;
   width: 100%;
-  height: 100lvh;
+  height: calc(100lvh - 30px);
+}
+
+.frame {
+  width: 100%;
+  height: 50px;
+  background-color: var(--bg-color-brown);
 }

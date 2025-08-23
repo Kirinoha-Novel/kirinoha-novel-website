@@ -5,10 +5,13 @@ import { Label } from "./Label/Label";
 
 const FirstView: FC = () => {
   return (
-    <div className={styles.firstView}>
-      <KeyVisual />
-      <Label />
-    </div>
+    <>
+      <div className={styles.firstView}>
+        <KeyVisual />
+        <Label />
+      </div>
+      <div className={styles.frame}></div>
+    </>
   );
 };
 

@@ -1,13 +1,33 @@
-import type { FC } from "react";
+import { useRef, type FC } from "react";
 import styles from "./About.module.css";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 const About: FC = () => {
+  const container = useRef<HTMLElement | null>(null);
+  const title = useRef<HTMLHeadingElement>(null);
+
+  useGSAP(
+    () => {
+      gsap.to("[data-animate='title']", {
+        opacity: 1,
+        duration: 0.5,
+        scrollTrigger: {
+          trigger: "[data-animate='title']",
+          start: "top center",
+          markers: true,
+        },
+      });
+    },
+    { scope: container }
+  );
+
   return (
-    <section className={styles.about}>
-      <h1 className={styles.title}>About Us</h1>
-      <p className={styles.description}>
-        We are a team of passionate developers.
-      </p>
+    <section ref={container}>
+      <h1 data-animate="title" className={styles.title} ref={title}>
+        サークル紹介
+      </h1>
+      <div className={styles.content}></div>
     </section>
   );
 };

@@ -1,12 +1,12 @@
 .label {
-  background-color: #e0d6be;
-  color: #7b5f47;
-  width: 300px;
+  --label-width: 244px;
+  background-color: var(--bg-color-brown);
+  width: var(--label-width);
   height: 100%;
 }
 
 .titleWrapper {
-  width: 100%;
+  width: var(--label-width);
   height: calc(100% - 50px);
   display: flex;
   align-items: center;
@@ -20,7 +20,7 @@
 }
 
 .iconWrapper {
-  width: 100%;
+  width: var(--label-width);
   display: flex;
   align-items: center;
   justify-content: center;
