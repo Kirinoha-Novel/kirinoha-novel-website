@@ -4,10 +4,10 @@
 
 http://flode-design.com/?p=1207
 
-- logo.png
+- logo.webp / og-image.webp
 
 きりのはのべるのオリジナルロゴ
 
-- icon.png
+- icon.webp
 
 きりのはのべるのオリジナルアイコン
