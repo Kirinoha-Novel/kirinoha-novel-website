@@ -31,7 +31,7 @@ const About: FC<Props> = (props: Props) => {
       <h1 className={styles.title} ref={title}>
         サークル紹介
       </h1>
-      <div className={styles.content}></div>
+      <div className={styles.content}>Hello, World!</div>
     </section>
   );
 };

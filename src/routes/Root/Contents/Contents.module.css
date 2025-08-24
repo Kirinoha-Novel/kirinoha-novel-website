@@ -1,3 +1,13 @@
 .content {
-  width: 100%;
+  height: calc(100lvh - 30px);
+  width: calc(100% - 244px);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  position: relative;
+}
+
+.content::-webkit-scrollbar {
+  display: none;
 }

@@ -7,9 +7,7 @@ const Root: FC = () => {
   return (
     <div className={styles.frame}>
       <Label />
-      <div className={styles.window}>
-        <Contents />
-      </div>
+      <Contents />
       <div className={styles.bar}></div>
     </div>
   );
