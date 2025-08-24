@@ -8,3 +8,15 @@
 .contents::-webkit-scrollbar {
   display: none;
 }
+
+@media screen and (max-width: 1149px) {
+  .contents {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1150px) {
+  .contents {
+    width: calc(100% - 244px);
+  }
+}
