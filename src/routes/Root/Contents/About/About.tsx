@@ -1,14 +1,14 @@
 import { useRef, type FC, type RefObject } from "react";
-import styles from "./About.module.css";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import styles from "./About.module.css";
 
 type Props = {
   contentRef: RefObject<HTMLDivElement | null>;
 };
 
 const About: FC<Props> = (props: Props) => {
-  const title = useRef<HTMLHeadingElement>(null);
+  const title = useRef<HTMLDivElement>(null);
 
   useGSAP(
     () => {
@@ -28,9 +28,9 @@ const About: FC<Props> = (props: Props) => {
 
   return (
     <section>
-      <h1 className={styles.title} ref={title}>
+      <div className={styles.title} ref={title}>
         サークル紹介
-      </h1>
+      </div>
       <div className={styles.content}>Hello, World!</div>
     </section>
   );
