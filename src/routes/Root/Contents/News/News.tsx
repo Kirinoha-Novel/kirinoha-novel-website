@@ -53,12 +53,10 @@ export const News: FC<Props> = (props: Props) => {
         ref={twitterWrapper}
       >
         <div className={styles.iconWrapper}>
-          <img className={styles.icon} src="/icon.png" alt="circle icon" />
+          <img className={styles.icon} src="/icon.webp" alt="circle icon" />
         </div>
         <div>
-          <h2 className={styles.twitterAccount}>
-            アカウント名: @kirinohanovel
-          </h2>
+          <h2 className={styles.twitterAccount}>@kirinohanovel</h2>
           <p className={styles.twitterDescription}>
             情報発信は、X (旧: Twitter) で行っています。
           </p>

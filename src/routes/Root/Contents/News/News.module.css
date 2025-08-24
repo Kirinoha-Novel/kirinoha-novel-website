@@ -31,8 +31,9 @@
 
 .twitterAccount {
   font-size: var(--text-2xl);
+  margin: 0 0 var(--space-xs) 0;
 }
 
 .twitterDescription {
-  font-size: var(--text-base);
+  font-size: var(--text-lg);
 }
