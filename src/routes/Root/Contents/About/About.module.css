@@ -1,27 +1,23 @@
 .logoWrapper {
-  margin: 20px auto 0 auto;
-  width: 250px;
+  margin: 0 auto;
+  width: 200px;
+  opacity: 0;
 }
 
 .logo {
   width: 100%;
   height: auto;
-  opacity: 0;
 }
 
 .descriptionWrapper {
   width: 100%;
   max-width: 800px;
-  margin: 0 auto;
+  margin: var(--space-xl) auto 0 auto;
 }
 
 .description {
   padding: 0 10px;
   opacity: 0;
   text-align: center;
-}
-
-.tmp {
-  width: 100%;
-  height: 1200px;
+  font-size: var(--text-base);
 }

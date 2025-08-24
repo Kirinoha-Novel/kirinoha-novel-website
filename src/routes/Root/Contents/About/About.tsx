@@ -8,18 +8,18 @@ type Props = {
 };
 
 const About: FC<Props> = (props: Props) => {
-  const logo = useRef<HTMLImageElement | null>(null);
+  const logoWrapper = useRef<HTMLDivElement | null>(null);
   const description = useRef<HTMLParagraphElement | null>(null);
 
   useGSAP(
     () => {
-      gsap.to(logo.current, {
+      gsap.to(logoWrapper.current, {
         opacity: 1,
         y: -20,
         duration: 1,
         scrollTrigger: {
           scroller: props.contentsRef.current,
-          trigger: logo.current,
+          trigger: logoWrapper.current,
           start: "top center",
           markers: true,
         },
@@ -42,8 +42,8 @@ const About: FC<Props> = (props: Props) => {
 
   return (
     <section>
-      <div className={styles.logoWrapper}>
-        <img className={styles.logo} src="/logo.svg" alt="logo" ref={logo} />
+      <div className={styles.logoWrapper} ref={logoWrapper}>
+        <img className={styles.logo} src="/logo.png" alt="circle logo" />
       </div>
       <div className={styles.descriptionWrapper}>
         <p className={styles.description} ref={description}>
@@ -53,7 +53,6 @@ const About: FC<Props> = (props: Props) => {
           筑波大学を飛び越えてみなさんに萌えをお届けします。
         </p>
       </div>
-      <div className={styles.tmp}></div>
     </section>
   );
 };
