@@ -1,4 +1,15 @@
 .footer {
-  width: 100%;
-  height: var(--space-6xl);
+  width: fit-content;
+  height: fit-content;
+  border-radius: 22px;
+  padding: 10px 20px;
+  margin: var(--space-5xl) auto var(--space-xl) auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-color-brown);
+}
+
+.copyRight {
+  font-size: var(--text-base);
 }
