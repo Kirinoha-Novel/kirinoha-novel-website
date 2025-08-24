@@ -46,7 +46,7 @@ export const News: FC<Props> = (props: Props) => {
         News
       </h1>
       <a
-        href={"https://x.com/kirinohanobel"}
+        href={"https://x.com/kirinohanovel"}
         target="_blank"
         rel="noopener noreferrer"
         className={styles.twitterWrapper}
@@ -57,7 +57,7 @@ export const News: FC<Props> = (props: Props) => {
         </div>
         <div>
           <h2 className={styles.twitterAccount}>
-            アカウント名: @kirinohanobel
+            アカウント名: @kirinohanovel
           </h2>
           <p className={styles.twitterDescription}>
             情報発信は、X (旧: Twitter) で行っています。
