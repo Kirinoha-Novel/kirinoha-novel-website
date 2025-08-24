@@ -1,69 +1,95 @@
-# React + TypeScript + Vite
+# 「きりのはのべる」のウェブサイト
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## セットアップ
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```sh
+git clone https://github.com/Kirinoha-Novel/kirinoha-novel.git
+cd kirinoha-novel
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 開発サーバーの起動
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```sh
+npm run dev
+```
 
-export default tseslint.config([
-  globalIgnores(['dist']),
+## ビルドとビルドのプレビュー
+
+```sh
+# build command
+npm run build
+# preview command
+npm run preview
+```
+
+## Newsの更新
+
+`src/news.ts`を編集してください。
+
+一つのNewsは以下のような形で記述します。
+
+```typescript
   {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
+    url: "News内容に関連したURLをここに記述してください。",
+    date: "日付を YYYY/MM/DD の形式で記述してください。",
+    content: "Newsの内容をここに記述してください。",
   },
-])
+```
+
+Newsは、`InfoProps`配列の最上部が最新のNewsとして表示されます。
+
+そのため、追加するNewsを配列の最上部に追加してください。
+
+以下は、`src/news.ts`の内容の例です。
+
+```typescript
+
+import type { InfoProps } from "./routes/Root/Contents/News/info";
+
+//* News Information *//
+// small index (New Information) <-- infoArray --> large index (Old Information)
+export const infoArray: InfoProps[] = [
+  {
+    url: "https://twitter.com/kirinohanovel/status/1715735377925805224",
+    date: "2024/06/03",
+    content: "体験版v0.6.0を公開しました！",
+  },
+]
+```
+
+## Historyの更新
+
+`src/history.ts`の編集と`public/history/`配下への画像の追加を行ってください。
+
+一つのHistoryは以下のような形で記述します。
+
+```typescript
+  {
+    imagePath: "/history/<画像ファイル名> というパスをここに記述してください。",
+    title: "タイトルをここに記述してください。",
+    description: "説明をここに記述してください。",
+    date: "日付を YYYY/MM/DD の形式で記述してください。",
+  },
+```
+
+Historyは、`HistoryProps`配列の最上部が最新のHistoryとして表示されます。
+
+そのため、追加するHistoryを配列の最上部に追加してください。
+
+以下は、`src/history.ts`の内容の例です。
+
+```typescript
+import type { HistoryProps } from "./routes/Root/Contents/History/history";
+
+//* History Information *//
+// small index (New Information) <-- historyArray --> large index (Old Information)
+export const historyArray: HistoryProps[] = [
+  {
+    imagePath: "/history/establish.webp",
+    title: "きりのはのべる 発足",
+    description: "きりのはのべるが発足しました。",
+    date: "2023/01/01",
+  },
+];
 ```
