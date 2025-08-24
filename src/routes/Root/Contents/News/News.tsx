@@ -3,7 +3,7 @@ import styles from "./News.module.css";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { Info } from "./Info/Info";
-import { infoArray } from "../../../../data";
+import { infoArray } from "../../../../news";
 
 type Props = {
   contentsRef: RefObject<HTMLDivElement | null>;

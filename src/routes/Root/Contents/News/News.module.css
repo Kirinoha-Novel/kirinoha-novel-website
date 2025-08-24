@@ -1,6 +1,6 @@
 .ul {
-  width: fit-content;
-  max-width: 800px;
+  width: 100%;
+  max-width: calc(800px - var(--space-xl) * 2);
   height: 210px;
   margin: 0 auto;
   padding: var(--space-base) var(--space-xl) var(--space-xl) var(--space-xl);
