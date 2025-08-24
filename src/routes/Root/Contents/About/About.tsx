@@ -43,7 +43,7 @@ const About: FC<Props> = (props: Props) => {
   return (
     <section>
       <div className={styles.logoWrapper} ref={logoWrapper}>
-        <img className={styles.logo} src="/logo.png" alt="circle logo" />
+        <img className={styles.logo} src="/logo.webp" alt="circle logo" />
       </div>
       <div className={styles.descriptionWrapper}>
         <p className={styles.description} ref={description}>
