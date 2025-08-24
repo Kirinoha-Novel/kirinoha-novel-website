@@ -4,7 +4,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
 type Props = {
-  containerRef: RefObject<HTMLDivElement | null>;
+  contentRef: RefObject<HTMLDivElement | null>;
 };
 
 const About: FC<Props> = (props: Props) => {
@@ -16,14 +16,14 @@ const About: FC<Props> = (props: Props) => {
         opacity: 1,
         duration: 0.5,
         scrollTrigger: {
-          scroller: props.containerRef.current,
+          scroller: props.contentRef.current,
           trigger: title.current,
           start: "top center",
           markers: true,
         },
       });
     },
-    { scope: props.containerRef }
+    { scope: props.contentRef }
   );
 
   return (

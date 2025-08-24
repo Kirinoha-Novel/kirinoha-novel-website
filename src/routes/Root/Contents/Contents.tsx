@@ -4,12 +4,12 @@ import About from "./About/About";
 import FirstView from "./FirstView/FirstView";
 
 export const Contents: FC = () => {
-  const container = useRef<HTMLDivElement | null>(null);
+  const content = useRef<HTMLDivElement | null>(null);
 
   return (
-    <div className={styles.content} ref={container}>
+    <div className={styles.content} ref={content}>
       <FirstView />
-      <About containerRef={container} />
+      <About contentRef={content} />
     </div>
   );
 };
