@@ -2,36 +2,25 @@ import { useRef, type FC, type RefObject } from "react";
 import styles from "./News.module.css";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { Info } from "./Info/Info";
+import { infoArray } from "../../../../data";
 
 type Props = {
   contentsRef: RefObject<HTMLDivElement | null>;
 };
 
 export const News: FC<Props> = (props: Props) => {
-  const title = useRef<HTMLHeadingElement | null>(null);
-  const twitterWrapper = useRef<HTMLAnchorElement | null>(null);
+  const ul = useRef<HTMLUListElement | null>(null);
 
   useGSAP(
     () => {
-      gsap.to(title.current, {
+      gsap.to(ul.current, {
         opacity: 1,
         y: -20,
         duration: 1,
         scrollTrigger: {
           scroller: props.contentsRef.current,
-          trigger: title.current,
-          start: "top center",
-          markers: true,
-        },
-      });
-
-      gsap.to(twitterWrapper.current, {
-        opacity: 1,
-        y: -20,
-        duration: 1,
-        scrollTrigger: {
-          scroller: props.contentsRef.current,
-          trigger: twitterWrapper.current,
+          trigger: ul.current,
           start: "top center",
           markers: true,
         },
@@ -42,26 +31,11 @@ export const News: FC<Props> = (props: Props) => {
 
   return (
     <section>
-      <h1 className={styles.title} ref={title}>
-        News
-      </h1>
-      <a
-        href={"https://x.com/kirinohanovel"}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={styles.twitterWrapper}
-        ref={twitterWrapper}
-      >
-        <div className={styles.iconWrapper}>
-          <img className={styles.icon} src="/icon.webp" alt="circle icon" />
-        </div>
-        <div>
-          <h2 className={styles.twitterAccount}>@kirinohanovel</h2>
-          <p className={styles.twitterDescription}>
-            情報発信は、X (旧: Twitter) で行っています。
-          </p>
-        </div>
-      </a>
+      <ul className={styles.ul} ref={ul}>
+        {infoArray.map((info, index) => (
+          <Info key={index} {...info} />
+        ))}
+      </ul>
     </section>
   );
 };
