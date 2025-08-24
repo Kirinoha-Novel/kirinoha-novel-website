@@ -4,7 +4,7 @@
   font-family: "Klee One", cursive;
   font-weight: 400;
   font-style: normal;
-  cursor: none !important;
+  /* cursor: none !important; */
   color: var(--font-color);
 }
 

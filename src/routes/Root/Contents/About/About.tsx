@@ -4,11 +4,11 @@ import { useGSAP } from "@gsap/react";
 import styles from "./About.module.css";
 
 type Props = {
-  contentRef: RefObject<HTMLDivElement | null>;
+  contentsRef: RefObject<HTMLDivElement | null>;
 };
 
 const About: FC<Props> = (props: Props) => {
-  const title = useRef<HTMLDivElement>(null);
+  const title = useRef<HTMLDivElement | null>(null);
 
   useGSAP(
     () => {
@@ -16,14 +16,14 @@ const About: FC<Props> = (props: Props) => {
         opacity: 1,
         duration: 0.5,
         scrollTrigger: {
-          scroller: props.contentRef.current,
+          scroller: props.contentsRef.current,
           trigger: title.current,
           start: "top center",
           markers: true,
         },
       });
     },
-    { scope: props.contentRef }
+    { scope: props.contentsRef }
   );
 
   return (
@@ -31,7 +31,7 @@ const About: FC<Props> = (props: Props) => {
       <div className={styles.title} ref={title}>
         サークル紹介
       </div>
-      <div className={styles.content}>Hello, World!</div>
+      <div className={styles.tmp}>Hello, World!</div>
     </section>
   );
 };
