@@ -6,7 +6,7 @@ import { News } from "./News/News";
 import { Footer } from "./Footer/Footer";
 import { Blog } from "./Blog/Blog";
 import { Title } from "./Title/Title";
-// import { Products } from "./Products/Products";
+import { History } from "./History/History";
 
 export const Contents: FC = () => {
   const contents = useRef<HTMLDivElement | null>(null);
@@ -17,10 +17,11 @@ export const Contents: FC = () => {
       <About contentsRef={contents} />
       <Title title="News" contentsRef={contents} />
       <News contentsRef={contents} />
-      <Title title="Products" contentsRef={contents} />
-      {/* <Products contentsRef={contents} /> */}
       <Title title="Blog" contentsRef={contents} />
       <Blog contentsRef={contents} />
+      <Title title="History" contentsRef={contents} />
+      {/* <History contentsRef={contents} /> */}
+      <History contentsRef={contents} />
       <Footer />
     </div>
   );
