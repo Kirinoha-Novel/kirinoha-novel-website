@@ -2,7 +2,10 @@
   --label-width: 244px;
   background-color: var(--bg-color-brown);
   width: var(--label-width);
-  height: 100%;
+  height: calc(100% - 30px);
+  position: fixed;
+  top: 0px;
+  right: 0px;
 }
 
 .titleWrapper {

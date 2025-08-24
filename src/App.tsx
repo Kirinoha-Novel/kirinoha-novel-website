@@ -1,7 +1,8 @@
 import { useRef, type FC } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { About, FirstView } from "./components";
+import { Root } from "./routes";
 import styles from "./App.module.css";
 
 const App: FC = () => {
@@ -31,15 +32,17 @@ const App: FC = () => {
   });
 
   return (
-    <div
-      className={styles.container}
-      ref={container}
-      onMouseMove={(e) => moveCursor(e)}
-    >
-      <div data-animate="cursor" className={styles.cursor} />
-      <FirstView />
-      <About />
-    </div>
+    <Router>
+      <div
+        ref={container}
+        onMouseMove={(e: React.MouseEvent<HTMLDivElement>) => moveCursor(e)}
+      >
+        <div data-animate="cursor" className={styles.cursor} />
+        <Routes>
+          <Route path="/" element={<Root />} />
+        </Routes>
+      </div>
+    </Router>
   );
 };
 

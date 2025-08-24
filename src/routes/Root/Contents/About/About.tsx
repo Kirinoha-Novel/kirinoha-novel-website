@@ -1,30 +1,34 @@
-import { useRef, type FC } from "react";
+import { useRef, type FC, type RefObject } from "react";
 import styles from "./About.module.css";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
-const About: FC = () => {
-  const container = useRef<HTMLElement | null>(null);
+type Props = {
+  containerRef: RefObject<HTMLDivElement | null>;
+};
+
+const About: FC<Props> = (props: Props) => {
   const title = useRef<HTMLHeadingElement>(null);
 
   useGSAP(
     () => {
-      gsap.to("[data-animate='title']", {
+      gsap.to(title.current, {
         opacity: 1,
         duration: 0.5,
         scrollTrigger: {
-          trigger: "[data-animate='title']",
+          scroller: props.containerRef.current,
+          trigger: title.current,
           start: "top center",
           markers: true,
         },
       });
     },
-    { scope: container }
+    { scope: props.containerRef }
   );
 
   return (
-    <section ref={container}>
-      <h1 data-animate="title" className={styles.title} ref={title}>
+    <section>
+      <h1 className={styles.title} ref={title}>
         サークル紹介
       </h1>
       <div className={styles.content}></div>
