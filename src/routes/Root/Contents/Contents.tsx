@@ -20,7 +20,6 @@ export const Contents: FC = () => {
       <Title title="Blog" contentsRef={contents} />
       <Blog contentsRef={contents} />
       <Title title="History" contentsRef={contents} />
-      {/* <History contentsRef={contents} /> */}
       <History contentsRef={contents} />
       <Footer />
     </div>
