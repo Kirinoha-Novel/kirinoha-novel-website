@@ -4,6 +4,10 @@
 
 http://flode-design.com/?p=1207
 
-- logo.svg
+- logo.png
 
 きりのはのべるのオリジナルロゴ
+
+- icon.png
+
+きりのはのべるのオリジナルアイコン
