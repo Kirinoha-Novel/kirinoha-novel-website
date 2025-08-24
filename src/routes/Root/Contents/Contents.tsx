@@ -4,6 +4,9 @@ import About from "./About/About";
 import FirstView from "./FirstView/FirstView";
 import { News } from "./News/News";
 import { Footer } from "./Footer/Footer";
+import { Blog } from "./Blog/Blog";
+import { Title } from "./Title/Title";
+// import { Products } from "./Products/Products";
 
 export const Contents: FC = () => {
   const contents = useRef<HTMLDivElement | null>(null);
@@ -12,7 +15,12 @@ export const Contents: FC = () => {
     <div className={styles.contents} ref={contents}>
       <FirstView contentsRef={contents} />
       <About contentsRef={contents} />
+      <Title title="News" contentsRef={contents} />
       <News contentsRef={contents} />
+      <Title title="Products" contentsRef={contents} />
+      {/* <Products contentsRef={contents} /> */}
+      <Title title="Blog" contentsRef={contents} />
+      <Blog contentsRef={contents} />
       <Footer />
     </div>
   );
