@@ -8,17 +8,17 @@ type Props = {
 };
 
 export const Blog: FC<Props> = (props: Props) => {
-  const blogWrapper = useRef<HTMLAnchorElement | null>(null);
+  const blogContainer = useRef<HTMLAnchorElement | null>(null);
 
   useGSAP(
     () => {
-      gsap.to(blogWrapper.current, {
+      gsap.to(blogContainer.current, {
         opacity: 1,
         y: -20,
         duration: 1,
         scrollTrigger: {
           scroller: props.contentsRef.current,
-          trigger: blogWrapper.current,
+          trigger: blogContainer.current,
           start: "top center",
           markers: true,
         },
@@ -33,8 +33,8 @@ export const Blog: FC<Props> = (props: Props) => {
         href={""}
         target="_blank"
         rel="noopener noreferrer"
-        className={styles.blogWrapper}
-        ref={blogWrapper}
+        className={styles.blogContainer}
+        ref={blogContainer}
       >
         <div className={styles.iconWrapper}>
           <img className={styles.icon} src="/icon.webp" alt="circle icon" />
