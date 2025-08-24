@@ -1,51 +1,37 @@
 import type { InfoProps } from "./routes/Root/Contents/News/info";
 
 //* News Information *//
-// small index (New Information) <-- infoArray --> large index (Old Information)
+/*
+export const infoArray: InfoProps[] = [
+  # small index (New Information)
+  {
+    url: "https://x.com/kirinohanovel/status/1959571641484128619",
+    date: "2025/08/24",
+    content: "なついろにっき。のキービジュアル公開",
+  },
+  ...
+  # large index (Old Information)
+  {
+    url: "https://x.com/kirinohanovel/status/1954498122555490540",
+    date: "2025/08/10",
+    content: "Xでの初投稿です！",
+  },
+]
+*/
 export const infoArray: InfoProps[] = [
   {
-    url: "https://twitter.com/kirinohanovel/status/1715735377925805224",
-    date: "2024/06/03",
-    content: "体験版v0.6.0を公開しました！",
+    url: "https://x.com/kirinohanovel/status/1959571641484128619",
+    date: "2025/08/24",
+    content: "なついろにっき。のキービジュアル公開",
   },
   {
-    url: "https://twitter.com/kirinohanovel/status/1715735377925805224",
-    date: "2024/06/03",
-    content: "ブログを開設しました!",
+    url: "https://x.com/kirinohanovel/status/1957397084254142563",
+    date: "2025/08/18",
+    content: "サークルロゴ公開",
   },
   {
-    url: "https://twitter.com/kirinohanovel/status/1715735377925805224",
-    date: "2024/06/03",
-    content: "新しいキャラクターを追加しました！",
-  },
-  {
-    url: "https://twitter.com/kirinohanovel/status/1715735377925805224",
-    date: "2024/06/03",
-    content: "体験版v0.6.0を公開しました！",
-  },
-  {
-    url: "https://twitter.com/kirinohanovel/status/1715735377925805224",
-    date: "2024/06/03",
-    content: "ブログを開設しました!",
-  },
-  {
-    url: "https://twitter.com/kirinohanovel/status/1715735377925805224",
-    date: "2024/06/03",
-    content: "新しいキャラクターを追加しました！",
-  },
-  {
-    url: "https://twitter.com/kirinohanovel/status/1715735377925805224",
-    date: "2024/06/03",
-    content: "体験版v0.6.0を公開しました！",
-  },
-  {
-    url: "https://twitter.com/kirinohanovel/status/1715735377925805224",
-    date: "2024/06/03",
-    content: "ブログを開設しました!",
-  },
-  {
-    url: "https://twitter.com/kirinohanovel/status/1715735377925805224",
-    date: "2024/06/03",
-    content: "新しいキャラクターを追加しました！",
+    url: "https://x.com/kirinohanovel/status/1954498122555490540",
+    date: "2025/08/10",
+    content: "Xでの初投稿です！",
   },
 ];

@@ -48,7 +48,23 @@ Newsは、`InfoProps`配列の最上部が最新のNewsとして表示されま�
 import type { InfoProps } from "./routes/Root/Contents/News/info";
 
 //* News Information *//
-// small index (New Information) <-- infoArray --> large index (Old Information)
+/*
+export const infoArray: InfoProps[] = [
+  # small index (New Information)
+  {
+    url: "https://x.com/kirinohanovel/status/1959571641484128619",
+    date: "2025/08/24",
+    content: "なついろにっき。のキービジュアル公開",
+  },
+  ...
+  # large index (Old Information)
+  {
+    url: "https://x.com/kirinohanovel/status/1954498122555490540",
+    date: "2025/08/10",
+    content: "Xでの初投稿です！",
+  },
+]
+*/
 export const infoArray: InfoProps[] = [
   {
     url: "https://twitter.com/kirinohanovel/status/1715735377925805224",
@@ -83,7 +99,26 @@ Historyは、`HistoryProps`配列の最上部が最新のHistoryとして表示�
 import type { HistoryProps } from "./routes/Root/Contents/History/history";
 
 //* History Information *//
-// small index (New Information) <-- historyArray --> large index (Old Information)
+/*
+export const historyArray: HistoryProps[] = [
+  # small index (New Information)
+  {
+    imagePath: "/history/natsuiro.webp",
+    title: "なついろにっき。",
+    description:
+      "きりのはのべるの最初の作品「なついろにっき。」を公開しました。",
+    date: "2023/01/01",
+  },
+  ...
+  # large index (Old Information)
+  {
+    imagePath: "/history/establish.webp",
+    title: "きりのはのべる 発足",
+    description: "きりのはのべるが発足しました。",
+    date: "2023/01/01",
+  },
+]
+*/
 export const historyArray: HistoryProps[] = [
   {
     imagePath: "/history/establish.webp",
