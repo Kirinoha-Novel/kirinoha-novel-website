@@ -1,11 +1,12 @@
 .blogContainer {
-  width: 100%;
+  width: calc(100% - 10px * 4);
   max-width: 800px;
-  padding: var(--space-base) 0;
+  padding: var(--space-base) 10px;
   margin: 0 auto;
   border-radius: 10px;
   background-color: var(--bg-color-brown);
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 40px;
@@ -16,19 +17,36 @@
 
 .iconWrapper {
   width: 150px;
+  height: 150px;
 }
 
 .icon {
   width: 100%;
+  height: 100%;
   object-fit: contain;
   border-radius: 50%;
 }
 
+.blogText {
+  flex: 1;
+  min-width: 230px;
+}
+
 .blogTitle {
   font-size: var(--text-2xl);
-  margin: 0 0 var(--space-xs) 0;
+  margin: 0 0 10px 0;
 }
 
 .blogDescription {
   font-size: var(--text-lg);
+}
+
+@media screen and (max-width: 459px) {
+  .blogText {
+    text-align: center;
+  }
+}
+
+.span {
+  display: inline-block;
 }

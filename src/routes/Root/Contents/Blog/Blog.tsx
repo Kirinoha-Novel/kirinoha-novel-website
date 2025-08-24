@@ -39,10 +39,11 @@ export const Blog: FC<Props> = (props: Props) => {
         <div className={styles.iconWrapper}>
           <img className={styles.icon} src="/icon.webp" alt="circle icon" />
         </div>
-        <div>
+        <div className={styles.blogText}>
           <h2 className={styles.blogTitle}>制作日記</h2>
           <p className={styles.blogDescription}>
-            ゲーム制作に関する内容が綴られます！
+            <span className={styles.span}>ゲーム制作に関する内容が</span>
+            <span className={styles.span}>綴られます！</span>
           </p>
         </div>
       </a>

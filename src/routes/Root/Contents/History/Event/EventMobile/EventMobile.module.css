@@ -1,0 +1,46 @@
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 801px) {
+  .container {
+    display: none;
+  }
+}
+
+.textWrapper {
+  width: calc(100% - 10px * 2);
+  padding: 0 10px;
+  opacity: 0;
+}
+
+.title {
+  font-size: var(--text-2xl);
+  text-align: center;
+}
+
+.description {
+  font-size: var(--text-lg);
+  text-align: center;
+}
+
+.date {
+  display: block;
+  font-size: var(--text-base);
+  text-align: center;
+}
+
+.imageWrapper {
+  width: calc(100% - 10px * 2);
+  max-width: 370px;
+  padding: 0 10px;
+  margin: 100px auto 0 auto;
+  opacity: 0;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
