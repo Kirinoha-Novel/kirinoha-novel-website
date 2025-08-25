@@ -22,7 +22,7 @@ export const News: FC<Props> = (props: Props) => {
           scroller: props.contentsRef.current,
           trigger: ulWrapper.current,
           start: "top center",
-          markers: true,
+          markers: false,
         },
       });
     },
