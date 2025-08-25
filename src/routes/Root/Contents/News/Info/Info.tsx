@@ -4,15 +4,15 @@ import type { InfoProps } from "../info";
 
 export const Info: FC<InfoProps> = (props: InfoProps) => {
   return (
-    <li className={styles.list}>
+    <li className={styles.li}>
       <a
         className={styles.link}
         href={props.url}
         target="_blank"
         rel="noopener noreferrer"
       >
-        <small className={styles.date}>{props.date}</small>
-        <p className={styles.content}>{props.content}</p>
+        <span className={styles.date}>{props.date}</span>
+        <span className={styles.content}>{props.content}</span>
       </a>
     </li>
   );

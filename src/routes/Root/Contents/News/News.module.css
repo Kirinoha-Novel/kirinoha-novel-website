@@ -1,14 +1,28 @@
-.ul {
-  width: 100%;
-  max-width: calc(800px - var(--space-xl) * 2);
-  height: 210px;
-  margin: 0 auto;
-  padding: var(--space-base) var(--space-xl) var(--space-xl) var(--space-xl);
+.ulWrapper {
+  --ul-height: 210px;
+  width: calc(100% - 20px);
+  max-width: 800px;
+  height: var(--ul-height);
   background-color: var(--bg-color-brown);
   border-radius: 10px;
-  list-style: none;
-  /* overflow-y: scroll; */
+  margin: 0 auto;
+  padding: var(--space-base) 0 0 0;
+  opacity: 0;
   position: relative;
   z-index: 2;
-  opacity: 0;
+}
+
+.ul {
+  width: fit-content;
+  height: calc(var(--ul-height) - var(--space-xl));
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  margin: 0 auto;
+  padding: 0 10px var(--space-xl) 10px;
+  list-style: none;
+}
+
+ul::-webkit-scrollbar {
+  display: none;
 }

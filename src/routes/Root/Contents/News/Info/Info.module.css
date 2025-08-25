@@ -1,4 +1,4 @@
-.list {
+.li {
   width: 100%;
   margin: var(--space-base) 0 0 0;
   font-size: var(--text-xl);
@@ -6,16 +6,16 @@
 }
 
 .link {
-  display: flex;
-  align-items: flex-end;
-  gap: 20px;
   text-decoration: none;
 }
 
 .date {
   font-size: var(--text-base);
+  display: inline-block;
+  margin: 0 20px 0 0;
 }
 
 .content {
-  font-size: var(--text-xl);
+  font-size: var(--text-lg);
+  display: inline-block;
 }

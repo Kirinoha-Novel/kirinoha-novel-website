@@ -10,17 +10,17 @@ type Props = {
 };
 
 export const News: FC<Props> = (props: Props) => {
-  const ul = useRef<HTMLUListElement | null>(null);
+  const ulWrapper = useRef<HTMLDivElement | null>(null);
 
   useGSAP(
     () => {
-      gsap.to(ul.current, {
+      gsap.to(ulWrapper.current, {
         opacity: 1,
         y: -20,
         duration: 1,
         scrollTrigger: {
           scroller: props.contentsRef.current,
-          trigger: ul.current,
+          trigger: ulWrapper.current,
           start: "top center",
           markers: true,
         },
@@ -31,11 +31,13 @@ export const News: FC<Props> = (props: Props) => {
 
   return (
     <section>
-      <ul className={styles.ul} ref={ul}>
-        {infoArray.map((info, index) => (
-          <Info key={index} {...info} />
-        ))}
-      </ul>
+      <div className={styles.ulWrapper} ref={ulWrapper}>
+        <ul className={styles.ul}>
+          {infoArray.map((info, index) => (
+            <Info key={index} {...info} />
+          ))}
+        </ul>
+      </div>
     </section>
   );
 };
