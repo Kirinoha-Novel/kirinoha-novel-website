@@ -1,14 +1,42 @@
 import { GalleryArray } from "../../../../gallery";
 import { Work } from "./Work/Work";
 import styles from "./Gallery.module.css";
+import { useRef, type FC, type RefObject } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
-export const Gallery = () => {
+type Props = {
+  contentsRef: RefObject<HTMLDivElement | null>;
+};
+
+export const Gallery: FC<Props> = (props: Props) => {
+  const frame = useRef<HTMLDivElement | null>(null);
+
+  useGSAP(
+    () => {
+      gsap.to("[data-animate='work']", {
+        opacity: 1,
+        y: -20,
+        stagger: 0.1,
+        scrollTrigger: {
+          scroller: props.contentsRef.current,
+          trigger: frame.current,
+          start: "top center",
+          markers: true,
+        },
+      });
+    },
+    { scope: frame }
+  );
+
   return (
     <section>
       <div className={styles.gallery}>
-        <div className={styles.frame}>
+        <div className={styles.frame} ref={frame}>
           {GalleryArray.map((item, index) => (
-            <Work key={index} {...item} />
+            <div className={styles.work} data-animate="work" key={index}>
+              <Work {...item} />
+            </div>
           ))}
         </div>
       </div>

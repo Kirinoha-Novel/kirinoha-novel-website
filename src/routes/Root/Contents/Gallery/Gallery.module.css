@@ -40,3 +40,7 @@
     max-width: 250px;
   }
 }
+
+.work {
+  opacity: 0;
+}

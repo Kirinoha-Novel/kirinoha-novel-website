@@ -23,7 +23,7 @@ export const Contents: FC = () => {
       <Title title="Products" contentsRef={contents} />
       <Products contentsRef={contents} />
       <Title title="Gallery" contentsRef={contents} />
-      <Gallery />
+      <Gallery contentsRef={contents} />
       <Footer />
     </div>
   );
