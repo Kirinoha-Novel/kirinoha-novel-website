@@ -18,6 +18,10 @@ export const infoArray: InfoProps[] = [
 */
 export const GalleryArray: GalleryProps[] = [
   {
+    imagePath: "/gallery/stella.webp",
+    style: "cover",
+  },
+  {
     imagePath: "/gallery/natsuiro-key-visual.webp",
     style: "cover",
   },
