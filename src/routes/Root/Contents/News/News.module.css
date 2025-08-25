@@ -7,7 +7,7 @@
   background-color: var(--bg-color-brown);
   border-radius: 10px;
   list-style: none;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   position: relative;
   z-index: 2;
   opacity: 0;

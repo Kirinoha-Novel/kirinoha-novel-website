@@ -23,7 +23,7 @@ npm run build
 npm run preview
 ```
 
-## Newsの更新
+## `News`の更新
 
 `src/news.ts`を編集してください。
 
@@ -74,36 +74,36 @@ export const infoArray: InfoProps[] = [
 ]
 ```
 
-## Historyの更新
+## `Products`の更新
 
-`src/history.ts`の編集と`public/history/`配下への画像の追加を行ってください。
+`src/products.ts`の編集と`public/products/`配下への画像の追加を行ってください。
 
-一つのHistoryは以下のような形で記述します。
+一つのProductsは以下のような形で記述します。
 
 ```typescript
   {
-    imagePath: "/history/<画像ファイル名> というパスをここに記述してください。",
+    imagePath: "/products/<画像ファイル名> というパスをここに記述してください。",
     title: "タイトルをここに記述してください。",
     description: "説明をここに記述してください。",
     date: "日付を YYYY/MM/DD の形式で記述してください。",
   },
 ```
 
-Historyは、`HistoryProps`配列の最上部が最新のHistoryとして表示されます。
+Productsは、`ProductsProps`配列の最上部が最新のProductsとして表示されます。
 
-そのため、追加するHistoryを配列の最上部に追加してください。
+そのため、追加するProductsを配列の最上部に追加してください。
 
-以下は、`src/history.ts`の内容の例です。
+以下は、`src/products.ts`の内容の例です。
 
 ```typescript
-import type { HistoryProps } from "./routes/Root/Contents/History/history";
+import type { ProductsProps } from "./routes/Root/Contents/Products/products";
 
-//* History Information *//
+//* Products Information *//
 /*
-export const historyArray: HistoryProps[] = [
+export const productsArray: ProductsProps[] = [
   # small index (New Information)
   {
-    imagePath: "/history/natsuiro.webp",
+    imagePath: "/products/natsuiro.webp",
     title: "なついろにっき。",
     description:
       "きりのはのべるの最初の作品「なついろにっき。」を公開しました。",
@@ -112,19 +112,20 @@ export const historyArray: HistoryProps[] = [
   ...
   # large index (Old Information)
   {
-    imagePath: "/history/establish.webp",
+    imagePath: "/products/establish.webp",
     title: "きりのはのべる 発足",
     description: "きりのはのべるが発足しました。",
     date: "2023/01/01",
   },
 ]
 */
-export const historyArray: HistoryProps[] = [
+export const productsArray: ProductsProps[] = [
   {
-    imagePath: "/history/establish.webp",
-    title: "きりのはのべる 発足",
-    description: "きりのはのべるが発足しました。",
-    date: "2023/01/01",
+    imagePath: "/products/natsuiro.webp",
+    title: "なついろにっき。",
+    description:
+      "きりのはのべるの最初の作品「なついろにっき。」を公開しました。",
+    date: "2025/08/24",
   },
 ];
 ```

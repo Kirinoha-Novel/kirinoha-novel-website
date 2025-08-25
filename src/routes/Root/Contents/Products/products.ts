@@ -1,4 +1,4 @@
-export type HistoryProps = {
+export type ProductsProps = {
   imagePath: string;
   title: string;
   description: string;
