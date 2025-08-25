@@ -30,6 +30,7 @@
   display: block;
   font-size: var(--text-base);
   text-align: center;
+  opacity: 0;
 }
 
 .imageWrapper {
