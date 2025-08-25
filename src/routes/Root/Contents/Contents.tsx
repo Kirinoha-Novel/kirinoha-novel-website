@@ -7,6 +7,7 @@ import { Footer } from "./Footer/Footer";
 import { Blog } from "./Blog/Blog";
 import { Title } from "./Title/Title";
 import { Products } from "./Products/Products";
+import { Gallery } from "./Gallery/Gallery";
 
 export const Contents: FC = () => {
   const contents = useRef<HTMLDivElement | null>(null);
@@ -21,6 +22,8 @@ export const Contents: FC = () => {
       <Blog contentsRef={contents} />
       <Title title="Products" contentsRef={contents} />
       <Products contentsRef={contents} />
+      <Title title="Gallery" contentsRef={contents} />
+      <Gallery />
       <Footer />
     </div>
   );
