@@ -6,15 +6,7 @@ export const GalleryArray: GalleryProps[] = [
     style: "cover",
   },
   {
-    imagePath: "/gallery/natsuiro-logo.webp",
-    style: "contain",
-  },
-  {
     imagePath: "/gallery/establish.webp",
     style: "cover",
-  },
-  {
-    imagePath: "/gallery/kirinoha-novel-logo.webp",
-    style: "contain",
   },
 ];
