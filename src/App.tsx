@@ -2,7 +2,7 @@ import { useRef, type FC } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { Root } from "./routes";
+import { NotFound, Root } from "./routes";
 import styles from "./App.module.css";
 
 const App: FC = () => {
@@ -40,6 +40,7 @@ const App: FC = () => {
         <div data-animate="cursor" className={styles.cursor} />
         <Routes>
           <Route path="/" element={<Root />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </Router>
