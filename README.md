@@ -129,3 +129,59 @@ export const productsArray: ProductsProps[] = [
   },
 ];
 ```
+
+## `Gallery`の更新
+
+`src/gallery.ts`の編集と`public/gallery/`配下への画像の追加を行ってください。
+
+一つのGalleryは以下のような形で記述します。
+
+```typescript
+  {
+    imagePath: "/gallery/<画像ファイル名> というパスをここに記述してください。",
+    style: "cover または contain をここに記述してください。",
+  },
+```
+
+Galleryは、`GalleryProps`配列の最上部が最新のGalleryとして表示されます。
+
+そのため、追加するGalleryを配列の最上部に追加してください。
+
+- `cover` と `contain` の違いについて
+
+`cover`は、画像が枠全体 (250px × 250px) を覆うように拡大・縮小されます。画像の一部が切り取られることがありますが、枠全体が画像で満たされます。
+
+`contain`は、画像が枠内に収まるように拡大・縮小されます。画像全体が表示されるため、枠のサイズに合わせて余白ができることがあります。
+
+以下は、`src/gallery.ts`の内容の例です。
+
+```typescript
+import type { GalleryProps } from "./routes/Root/Contents/Gallery/gallery";
+
+//* Gallery Images *//
+/*
+export const infoArray: InfoProps[] = [
+  # small index (New Images)
+  {
+    imagePath: "/gallery/natsuiro-key-visual.webp",
+    style: "cover",
+  },
+  ...
+  # large index (Old Images)
+  {
+    imagePath: "/gallery/establish.webp",
+    style: "cover",
+  },
+]
+*/
+export const GalleryArray: GalleryProps[] = [
+  {
+    imagePath: "/gallery/natsuiro-key-visual.webp",
+    style: "cover",
+  },
+  {
+    imagePath: "/gallery/establish.webp",
+    style: "cover",
+  },
+];
+```

@@ -1,5 +1,21 @@
 import type { GalleryProps } from "./routes/Root/Contents/Gallery/gallery";
 
+//* Gallery Images *//
+/*
+export const infoArray: InfoProps[] = [
+  # small index (New Images)
+  {
+    imagePath: "/gallery/natsuiro-key-visual.webp",
+    style: "cover",
+  },
+  ...
+  # large index (Old Images)
+  {
+    imagePath: "/gallery/establish.webp",
+    style: "cover",
+  },
+]
+*/
 export const GalleryArray: GalleryProps[] = [
   {
     imagePath: "/gallery/natsuiro-key-visual.webp",
