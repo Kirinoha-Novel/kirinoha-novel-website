@@ -36,6 +36,7 @@ const Text: FC<TextProps> = (props: TextProps) => {
 export const EventPc: FC<EventProps> = (props: EventProps) => {
   const image = useRef<HTMLDivElement | null>(null);
   const text = useRef<HTMLDivElement | null>(null);
+  const date = useRef<HTMLElement | null>(null);
 
   useGSAP(
     () => {
@@ -58,6 +59,17 @@ export const EventPc: FC<EventProps> = (props: EventProps) => {
         scrollTrigger: {
           scroller: props.contentsRef.current,
           trigger: text.current,
+          start: "top center",
+          markers: false,
+        },
+      });
+
+      gsap.to(date.current, {
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          scroller: props.contentsRef.current,
+          trigger: date.current,
           start: "top center",
           markers: false,
         },
@@ -100,7 +112,9 @@ export const EventPc: FC<EventProps> = (props: EventProps) => {
           )}
         </div>
       </div>
-      <small className={styles.date}>{props.date}</small>
+      <small className={styles.date} ref={date}>
+        {props.date}
+      </small>
     </div>
   );
 };
