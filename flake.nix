@@ -1,5 +1,5 @@
 {
-  description = "nodejs flake sample";
+  description = "kirinoha-novel website";
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     flake-utils.url = "github:numtide/flake-utils";
