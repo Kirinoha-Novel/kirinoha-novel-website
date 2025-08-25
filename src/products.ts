@@ -9,7 +9,7 @@ export const productsArray: ProductsProps[] = [
     title: "なついろにっき。",
     description:
       "きりのはのべるの最初の作品「なついろにっき。」を公開しました。",
-    date: "2023/01/01",
+    date: "2025/08/24",
   },
   ...
   # large index (Old Information)
@@ -17,7 +17,7 @@ export const productsArray: ProductsProps[] = [
     imagePath: "/products/establish.webp",
     title: "きりのはのべる 発足",
     description: "きりのはのべるが発足しました。",
-    date: "2023/01/01",
+    date: "2025/07/16",
   },
 ]
 */
@@ -33,6 +33,6 @@ export const productsArray: ProductsProps[] = [
     imagePath: "/products/establish.webp",
     title: "きりのはのべる 発足",
     description: "きりのはのべるが発足しました。",
-    date: "2023/07/16",
+    date: "2025/07/16",
   },
 ];
