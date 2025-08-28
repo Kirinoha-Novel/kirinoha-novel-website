@@ -17,7 +17,7 @@ jobs:
         uses: cachix/install-nix-action@v31
         with:
           nix_path: nixpkgs=channel:nixpkgs-unstable
-      - name: ESLint Check
+      - name: ESLint Verification
         run: nix develop --command bash -c "npm i && npm run lint"
-      - name: Build Check
+      - name: Build Verification
         run: nix develop --command bash -c "npm i && npm run build"
