@@ -30,7 +30,7 @@ export const Blog: FC<Props> = (props: Props) => {
   return (
     <section>
       <a
-        href={""}
+        href={"https://blog.kirinohanovel.com"}
         target="_blank"
         rel="noopener noreferrer"
         className={styles.blogContainer}
