@@ -82,14 +82,21 @@ export const EventMobile: FC<EventProps> = (props: EventProps) => {
   return (
     <div className={styles.container}>
       <Image imagePath={props.imagePath} title={props.title} imageRef={image} />
-      <Text
-        title={props.title}
-        description={props.description}
-        textRef={text}
-      />
-      <small className={styles.date} ref={date}>
-        {props.date}
-      </small>
+      <a
+        className={styles.link}
+        href={props.url}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Text
+          title={props.title}
+          description={props.description}
+          textRef={text}
+        />
+        <small className={styles.date} ref={date}>
+          {props.date}
+        </small>
+      </a>
     </div>
   );
 };

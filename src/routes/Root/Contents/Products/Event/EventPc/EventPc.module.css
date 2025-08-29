@@ -34,6 +34,8 @@
 }
 
 .textWrapper {
+  position: relative;
+  z-index: 2;
   margin: 0 15px;
   opacity: 0;
 }

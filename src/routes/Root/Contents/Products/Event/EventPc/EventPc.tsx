@@ -21,21 +21,28 @@ const Image: FC<ImageProps> = (props: ImageProps) => {
 type TextProps = {
   title: string;
   description: string;
-  textRef: RefObject<HTMLDivElement | null>;
+  textRef: RefObject<HTMLAnchorElement | null>;
+  url: string;
 };
 
 const Text: FC<TextProps> = (props: TextProps) => {
   return (
-    <div className={styles.textWrapper} ref={props.textRef}>
+    <a
+      href={props.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={styles.textWrapper}
+      ref={props.textRef}
+    >
       <h2 className={styles.title}>{props.title}</h2>
       <p className={styles.description}>{props.description}</p>
-    </div>
+    </a>
   );
 };
 
 export const EventPc: FC<EventProps> = (props: EventProps) => {
   const image = useRef<HTMLDivElement | null>(null);
-  const text = useRef<HTMLDivElement | null>(null);
+  const text = useRef<HTMLAnchorElement | null>(null);
   const date = useRef<HTMLElement | null>(null);
 
   useGSAP(
@@ -93,6 +100,7 @@ export const EventPc: FC<EventProps> = (props: EventProps) => {
               title={props.title}
               description={props.description}
               textRef={text}
+              url={props.url}
             />
           )}
         </div>
@@ -102,6 +110,7 @@ export const EventPc: FC<EventProps> = (props: EventProps) => {
               title={props.title}
               description={props.description}
               textRef={text}
+              url={props.url}
             />
           ) : (
             <Image

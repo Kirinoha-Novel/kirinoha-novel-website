@@ -14,6 +14,7 @@ export const Event: FC<EventProps> = (props: EventProps) => {
         description={props.description}
         date={props.date}
         contentsRef={props.contentsRef}
+        url={props.url}
       />
       {/* Mobile Version */}
       <EventMobile
@@ -23,6 +24,7 @@ export const Event: FC<EventProps> = (props: EventProps) => {
         description={props.description}
         date={props.date}
         contentsRef={props.contentsRef}
+        url={props.url}
       />
     </>
   );

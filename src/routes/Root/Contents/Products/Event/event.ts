@@ -7,4 +7,5 @@ export type EventProps = {
   description: string;
   date: string;
   contentsRef: RefObject<HTMLDivElement | null>;
+  url: string;
 };
