@@ -10,22 +10,19 @@ type Props = {
 export const Blog: FC<Props> = (props: Props) => {
   const blogContainer = useRef<HTMLAnchorElement | null>(null);
 
-  useGSAP(
-    () => {
-      gsap.to(blogContainer.current, {
-        opacity: 1,
-        y: -20,
-        duration: 1,
-        scrollTrigger: {
-          scroller: props.contentsRef.current,
-          trigger: blogContainer.current,
-          start: "top center",
-          markers: false,
-        },
-      });
-    },
-    { scope: props.contentsRef }
-  );
+  useGSAP(() => {
+    gsap.to(blogContainer.current, {
+      opacity: 1,
+      y: -20,
+      duration: 1,
+      scrollTrigger: {
+        scroller: props.contentsRef.current,
+        trigger: blogContainer.current,
+        start: "top center",
+        markers: true,
+      },
+    });
+  });
 
   return (
     <section>

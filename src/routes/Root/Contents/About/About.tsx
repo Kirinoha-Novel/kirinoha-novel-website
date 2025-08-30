@@ -11,34 +11,31 @@ const About: FC<Props> = (props: Props) => {
   const logoWrapper = useRef<HTMLDivElement | null>(null);
   const description = useRef<HTMLParagraphElement | null>(null);
 
-  useGSAP(
-    () => {
-      gsap.to(logoWrapper.current, {
-        opacity: 1,
-        y: -20,
-        duration: 1,
-        scrollTrigger: {
-          scroller: props.contentsRef.current,
-          trigger: logoWrapper.current,
-          start: "top center",
-          markers: false,
-        },
-      });
+  useGSAP(() => {
+    gsap.to(logoWrapper.current, {
+      opacity: 1,
+      y: -20,
+      duration: 1,
+      scrollTrigger: {
+        scroller: props.contentsRef.current,
+        trigger: logoWrapper.current,
+        start: "top center",
+        markers: true,
+      },
+    });
 
-      gsap.to(description.current, {
-        opacity: 1,
-        y: -20,
-        duration: 1,
-        scrollTrigger: {
-          scroller: props.contentsRef.current,
-          trigger: description.current,
-          start: "top center",
-          markers: false,
-        },
-      });
-    },
-    { scope: props.contentsRef }
-  );
+    gsap.to(description.current, {
+      opacity: 1,
+      y: -20,
+      duration: 1,
+      scrollTrigger: {
+        scroller: props.contentsRef.current,
+        trigger: description.current,
+        start: "top center",
+        markers: true,
+      },
+    });
+  });
 
   return (
     <section>
@@ -57,4 +54,4 @@ const About: FC<Props> = (props: Props) => {
   );
 };
 
-export default About;
+export { About };

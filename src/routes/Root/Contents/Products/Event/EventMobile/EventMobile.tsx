@@ -38,46 +38,43 @@ export const EventMobile: FC<EventProps> = (props: EventProps) => {
   const text = useRef<HTMLDivElement | null>(null);
   const date = useRef<HTMLElement | null>(null);
 
-  useGSAP(
-    () => {
-      gsap.to(image.current, {
-        opacity: 1,
-        y: -20,
-        duration: 1,
-        scrollTrigger: {
-          scroller: props.contentsRef.current,
-          trigger: image.current,
-          start: "top center",
-          markers: false,
-        },
-      });
+  useGSAP(() => {
+    gsap.to(image.current, {
+      opacity: 1,
+      y: -20,
+      duration: 1,
+      scrollTrigger: {
+        scroller: props.contentsRef.current,
+        trigger: image.current,
+        start: "top center",
+        markers: true,
+      },
+    });
 
-      gsap.to(text.current, {
-        opacity: 1,
-        y: -20,
-        duration: 1,
-        scrollTrigger: {
-          scroller: props.contentsRef.current,
-          trigger: text.current,
-          start: "top center",
-          markers: false,
-        },
-      });
+    gsap.to(text.current, {
+      opacity: 1,
+      y: -20,
+      duration: 1,
+      scrollTrigger: {
+        scroller: props.contentsRef.current,
+        trigger: text.current,
+        start: "top center",
+        markers: true,
+      },
+    });
 
-      gsap.to(date.current, {
-        opacity: 1,
-        y: -20,
-        duration: 1,
-        scrollTrigger: {
-          scroller: props.contentsRef.current,
-          trigger: date.current,
-          start: "top center",
-          markers: false,
-        },
-      });
-    },
-    { scope: props.contentsRef }
-  );
+    gsap.to(date.current, {
+      opacity: 1,
+      y: -20,
+      duration: 1,
+      scrollTrigger: {
+        scroller: props.contentsRef.current,
+        trigger: date.current,
+        start: "top center",
+        markers: true,
+      },
+    });
+  });
 
   return (
     <div className={styles.container}>

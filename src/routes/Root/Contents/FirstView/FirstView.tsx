@@ -1,24 +1,17 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { useRef, type FC, type RefObject } from "react";
+import { useRef, type FC } from "react";
 import styles from "./FirstView.module.css";
 
-type Props = {
-  contentsRef: RefObject<HTMLDivElement | null>;
-};
-
-const FirstView: FC<Props> = (props: Props) => {
+const FirstView: FC = () => {
   const catchPhraseWrapper = useRef<HTMLDivElement | null>(null);
 
-  useGSAP(
-    () => {
-      gsap.to(catchPhraseWrapper.current, {
-        opacity: 1,
-        duration: 2,
-      });
-    },
-    { scope: props.contentsRef }
-  );
+  useGSAP(() => {
+    gsap.to(catchPhraseWrapper.current, {
+      opacity: 1,
+      duration: 2,
+    });
+  });
 
   return (
     <div className={styles.firstView}>
@@ -34,4 +27,4 @@ const FirstView: FC<Props> = (props: Props) => {
   );
 };
 
-export default FirstView;
+export { FirstView };

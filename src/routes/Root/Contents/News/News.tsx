@@ -12,22 +12,19 @@ type Props = {
 export const News: FC<Props> = (props: Props) => {
   const ulWrapper = useRef<HTMLDivElement | null>(null);
 
-  useGSAP(
-    () => {
-      gsap.to(ulWrapper.current, {
-        opacity: 1,
-        y: -20,
-        duration: 1,
-        scrollTrigger: {
-          scroller: props.contentsRef.current,
-          trigger: ulWrapper.current,
-          start: "top center",
-          markers: false,
-        },
-      });
-    },
-    { scope: props.contentsRef }
-  );
+  useGSAP(() => {
+    gsap.to(ulWrapper.current, {
+      opacity: 1,
+      y: -20,
+      duration: 1,
+      scrollTrigger: {
+        scroller: props.contentsRef.current,
+        trigger: ulWrapper.current,
+        start: "top center",
+        markers: true,
+      },
+    });
+  });
 
   return (
     <section>

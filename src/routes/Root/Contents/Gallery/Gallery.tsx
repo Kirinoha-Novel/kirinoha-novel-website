@@ -22,7 +22,7 @@ export const Gallery: FC<Props> = (props: Props) => {
           scroller: props.contentsRef.current,
           trigger: frame.current,
           start: "top center",
-          markers: false,
+          markers: true,
         },
       });
     },
