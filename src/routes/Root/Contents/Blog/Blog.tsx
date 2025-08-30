@@ -19,7 +19,7 @@ export const Blog: FC<Props> = (props: Props) => {
         scroller: props.contentsRef.current,
         trigger: blogContainer.current,
         start: "top center",
-        markers: true,
+        markers: false,
       },
     });
   });

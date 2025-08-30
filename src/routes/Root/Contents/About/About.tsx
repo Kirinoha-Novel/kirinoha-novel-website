@@ -20,7 +20,7 @@ const About: FC<Props> = (props: Props) => {
         scroller: props.contentsRef.current,
         trigger: logoWrapper.current,
         start: "top center",
-        markers: true,
+        markers: false,
       },
     });
 
@@ -32,7 +32,7 @@ const About: FC<Props> = (props: Props) => {
         scroller: props.contentsRef.current,
         trigger: description.current,
         start: "top center",
-        markers: true,
+        markers: false,
       },
     });
   });
