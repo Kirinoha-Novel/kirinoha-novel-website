@@ -26,14 +26,14 @@ export const productsArray: ProductsProps[] = [
     imagePath: "/products/natsuiro.webp",
     title: "なついろにっき。",
     description:
-      "きりのはのべるの最初の作品「なついろにっき。」を公開しました。",
+      "きりのはのべる の最初の作品「なついろにっき。」の制作が開始。",
     date: "2025/08/24",
     url: "https://natsuiro.kirinohanovel.com",
   },
   {
     imagePath: "/products/establish.webp",
     title: "きりのはのべる 発足",
-    description: "きりのはのべるが発足しました。",
+    description: "きりのはのべる が発足。",
     date: "2025/07/16",
     url: "https://kirinohanovel.com",
   },
