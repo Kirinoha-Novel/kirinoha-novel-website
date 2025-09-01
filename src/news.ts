@@ -22,7 +22,12 @@ export const infoArray: InfoProps[] = [
   {
     url: "https://x.com/kirinohanovel/status/1962108105124360515",
     date: "2025/08/31",
-    content: "公式サイト開設！",
+    content: "公式サイト開設",
+  },
+  {
+    url: "https://x.com/kirinohanovel/status/1962108103618633751",
+    date: "2025/08/31",
+    content: "公式YouTubeチャンネル開設",
   },
   {
     url: "https://x.com/kirinohanovel/status/1959571641484128619",
