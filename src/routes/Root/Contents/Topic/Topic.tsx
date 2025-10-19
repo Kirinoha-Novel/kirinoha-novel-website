@@ -2,7 +2,6 @@ import { useRef, type FC, type RefObject } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import styles from "./Topic.module.css";
-import { Link } from "react-router";
 
 type Props = {
   contentsRef: RefObject<HTMLDivElement | null>;
@@ -59,9 +58,14 @@ const Topic: FC<Props> = (props: Props) => {
       <p className={styles.description} ref={description}>
         11/2,3の雙峰祭にて開催されるコミックつくばに出展します。
       </p>
-      <Link className={styles.link} ref={link} to="/comitsuku2025">
+      <a
+        className={styles.link}
+        ref={link}
+        href="/comitsuku2025"
+        rel="noopener noreferrer"
+      >
         コミックつくば 特設サイトはこちらから！
-      </Link>
+      </a>
     </section>
   );
 };
