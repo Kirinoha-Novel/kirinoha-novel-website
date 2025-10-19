@@ -2,12 +2,27 @@
   --meisi-image-height: 450px;
 }
 
-.firstView {
+.pcFirstView {
   display: flex;
   gap: 150px;
   justify-content: center;
   align-items: center;
   height: calc(100lvh - var(--header-height));
+}
+
+.mobileFirstView {
+  margin: 100px 0;
+}
+
+@media screen and (max-width: 839px) {
+  .pcFirstView {
+    display: none;
+  }
+}
+@media screen and (min-width: 840px) {
+  .mobileFirstView {
+    display: none;
+  }
 }
 
 .textBox {
@@ -23,12 +38,17 @@
   position: relative;
 }
 
-.title {
-  font-size: var(--text-3xl);
+.pcTitle {
   display: block;
   position: absolute;
   bottom: 0;
   left: 0;
+}
+
+.mobileTitle {
+  margin: 0 0 50px 0;
+  font-size: var(--text-3xl);
+  text-align: center;
 }
 
 .descriptionBox {
@@ -37,24 +57,42 @@
   position: relative;
 }
 
-.descriptionWrapper {
+.pcDescriptionWrapper {
   position: absolute;
   bottom: 0;
   left: 0;
+}
+
+.mobileDescriptionWrapper {
+  width: 280px;
+  margin: 20px auto 0 auto;
 }
 
 .description {
   font-size: var(--text-base);
 }
 
-.meisiImageBox {
+.pcMeisiImageBox {
   height: 100%;
   max-height: var(--meisi-image-height);
 }
 
-.meisiImage {
+.pcMeisiImage {
   display: block;
   height: var(--meisi-image-height);
   width: auto;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.mobileMeisiImageBox {
+  height: 100%;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.mobileMeisiImage {
+  display: block;
+  height: auto;
+  width: 280px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 }

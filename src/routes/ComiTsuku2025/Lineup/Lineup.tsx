@@ -7,7 +7,7 @@ const items: ItemType[] = [
   {
     size: "Large" as SizeType,
     imagePath: "/items/booklet.webp",
-    width: 5098,
+    width: 2549,
     height: 3624,
     name: "制作日誌",
     price: 300,

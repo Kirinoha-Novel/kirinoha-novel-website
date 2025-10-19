@@ -52,41 +52,72 @@ const FirstView: FC = () => {
   }, []);
 
   return (
-    <div className={styles.firstView}>
-      <div className={styles.textBox}>
-        <div className={styles.titleBox}>
-          <h1 className={styles.title}>:&gt; Comic Tsukuba</h1>
-        </div>
-        <div className={styles.descriptionBox}>
-          <div className={styles.descriptionWrapper}>
-            <p className={styles.description}>:Kirinoha-Novel</p>
-            <p className={styles.description}>
-              Date&gt; 2025/11/02 ~ 2025/11/3
-            </p>
-            {remainingTime ? (
+    <>
+      {/* PC View */}
+      <div className={styles.pcFirstView}>
+        <div className={styles.textBox}>
+          <div className={styles.titleBox}>
+            <h1 className={styles.pcTitle}>:&gt; Comic Tsukuba</h1>
+          </div>
+          <div className={styles.descriptionBox}>
+            <div className={styles.pcDescriptionWrapper}>
+              <p className={styles.description}>:Kirinoha-Novel</p>
               <p className={styles.description}>
-                Remaining Time&gt; {remainingTime.days}D_
-                {String(remainingTime.hours).padStart(2, "0")}:
-                {String(remainingTime.minutes).padStart(2, "0")}:
-                {String(remainingTime.seconds).padStart(2, "0")}.
-                {String(remainingTime.milliseconds).padStart(3, "0")}
+                Date&gt; 2025/11/02 ~ 2025/11/3
               </p>
-            ) : (
-              <p className={styles.description}>calculating...</p>
-            )}
+              {remainingTime ? (
+                <p className={styles.description}>
+                  Remaining Time&gt; {remainingTime.days}D_
+                  {String(remainingTime.hours).padStart(2, "0")}:
+                  {String(remainingTime.minutes).padStart(2, "0")}:
+                  {String(remainingTime.seconds).padStart(2, "0")}.
+                  {String(remainingTime.milliseconds).padStart(3, "0")}
+                </p>
+              ) : (
+                <p className={styles.description}>calculating...</p>
+              )}
+            </div>
           </div>
         </div>
+        <div className={styles.pcMeisiImageBox}>
+          <img
+            className={styles.pcMeisiImage}
+            src={meisiImage}
+            width={841}
+            height={1337}
+            alt="meisi"
+          />
+        </div>
       </div>
-      <div className={styles.meisiImageBox}>
-        <img
-          className={styles.meisiImage}
-          src={meisiImage}
-          width={841}
-          height={1337}
-          alt="meisi"
-        />
+      {/* Mobile View */}
+      <div className={styles.mobileFirstView}>
+        <h1 className={styles.mobileTitle}>:&gt; Comic Tsukuba</h1>
+        <div className={styles.mobileMeisiImageBox}>
+          <img
+            className={styles.mobileMeisiImage}
+            src={meisiImage}
+            width={841}
+            height={1337}
+            alt="meisi"
+          />
+        </div>
+        <div className={styles.mobileDescriptionWrapper}>
+          <p className={styles.description}>:Kirinoha-Novel</p>
+          <p className={styles.description}>Date&gt; 2025/11/02 ~ 2025/11/3</p>
+          {remainingTime ? (
+            <p className={styles.description}>
+              Remaining Time&gt; {remainingTime.days}D_
+              {String(remainingTime.hours).padStart(2, "0")}:
+              {String(remainingTime.minutes).padStart(2, "0")}:
+              {String(remainingTime.seconds).padStart(2, "0")}.
+              {String(remainingTime.milliseconds).padStart(3, "0")}
+            </p>
+          ) : (
+            <p className={styles.description}>calculating...</p>
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
