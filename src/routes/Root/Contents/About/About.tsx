@@ -2,6 +2,7 @@ import { useRef, type FC, type RefObject } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import styles from "./About.module.css";
+import circleLogo from "../../assets/logo.webp";
 
 type Props = {
   contentsRef: RefObject<HTMLDivElement | null>;
@@ -40,7 +41,7 @@ const About: FC<Props> = (props: Props) => {
   return (
     <section>
       <div className={styles.logoWrapper} ref={logoWrapper}>
-        <img className={styles.logo} src="/logo.webp" alt="circle logo" />
+        <img className={styles.logo} src={circleLogo} alt="circle logo" />
       </div>
       <div className={styles.descriptionWrapper}>
         <p className={styles.description} ref={description}>

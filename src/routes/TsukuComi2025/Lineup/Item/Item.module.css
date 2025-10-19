@@ -1,0 +1,22 @@
+.item {
+  --item-padding: 20px;
+  width: calc(350px - var(--item-padding) * 2);
+  padding: var(--item-padding);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.itemImage {
+  object-fit: cover;
+  object-position: top;
+  width: 100%;
+  height: auto;
+}
+
+.itemName {
+  margin: 30px 0 0 0;
+  font-size: var(--text-xl);
+}
+
+.itemPrice {
+  font-size: var(--text-base);
+}

@@ -1,0 +1,14 @@
+.title {
+  margin: 0 0 100px 0;
+  font-size: var(--text-3xl);
+  text-align: center;
+}
+
+.items {
+  width: 1130px;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}

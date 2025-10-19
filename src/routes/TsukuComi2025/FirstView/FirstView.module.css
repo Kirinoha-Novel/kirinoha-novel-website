@@ -1,0 +1,60 @@
+:root {
+  --meisi-image-height: 450px;
+}
+
+.firstView {
+  display: flex;
+  gap: 150px;
+  justify-content: center;
+  align-items: center;
+  height: calc(100lvh - var(--header-height));
+}
+
+.textBox {
+  height: var(--meisi-image-height);
+  width: 275.6px;
+  display: flex;
+  flex-direction: column;
+}
+
+.titleBox {
+  height: 50%;
+  width: auto;
+  position: relative;
+}
+
+.title {
+  font-size: var(--text-3xl);
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.descriptionBox {
+  height: 50%;
+  width: auto;
+  position: relative;
+}
+
+.descriptionWrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.description {
+  font-size: var(--text-base);
+}
+
+.meisiImageBox {
+  height: 100%;
+  max-height: var(--meisi-image-height);
+}
+
+.meisiImage {
+  display: block;
+  height: var(--meisi-image-height);
+  width: auto;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
