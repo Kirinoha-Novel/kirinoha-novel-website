@@ -1,0 +1,25 @@
+.title {
+  margin: 0 0 100px 0;
+  font-size: var(--text-3xl);
+  text-align: center;
+}
+
+.items {
+  max-width: 1130px;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width: 400px) {
+  .items {
+    width: calc(100% - 40px * 2);
+  }
+}
+@media screen and (max-width: 399px) {
+  .items {
+    width: calc(100% - 20px * 2);
+  }
+}

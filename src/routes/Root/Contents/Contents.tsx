@@ -2,6 +2,7 @@ import { useRef, type FC } from "react";
 import styles from "./Contents.module.css";
 import { Title } from "./Title/Title";
 import { FirstView } from "./FirstView/FirstView";
+import { Topic } from "./Topic/Topic";
 import { About } from "./About/About";
 import { News } from "./News/News";
 import { Blog } from "./Blog/Blog";
@@ -15,6 +16,8 @@ export const Contents: FC = () => {
   return (
     <div className={styles.contents} ref={contents}>
       <FirstView />
+      <Title title="Topic" contentsRef={contents} />
+      <Topic contentsRef={contents} />
       <About contentsRef={contents} />
       <Title title="News" contentsRef={contents} />
       <News contentsRef={contents} />

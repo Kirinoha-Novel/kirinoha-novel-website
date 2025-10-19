@@ -1,0 +1,41 @@
+.item {
+  --item-padding: 20px;
+  padding: var(--item-padding);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (min-width: 820px) {
+  .largeItem {
+    width: calc(350px * 2);
+  }
+  .smallItem {
+    width: calc(350px - var(--item-padding) * 2);
+  }
+}
+@media screen and (max-width: 819px) {
+  .largeItem {
+    width: 100%;
+  }
+  .smallItem {
+    width: 100%;
+  }
+}
+
+.itemImage {
+  display: block;
+  object-fit: cover;
+  object-position: 50% 50%;
+  height: 400px;
+  width: auto;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.itemName {
+  margin: 30px 0 0 0;
+  font-size: var(--text-xl);
+}
+
+.itemPrice {
+  font-size: var(--text-base);
+}
