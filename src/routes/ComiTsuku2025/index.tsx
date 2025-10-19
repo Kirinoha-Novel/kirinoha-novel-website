@@ -1,4 +1,5 @@
 import { type FC } from "react";
+import { Loading } from "./Loading/Loading";
 import { Header } from "./Header/Header";
 import { FirstView } from "./FirstView/FirstView";
 import { Lineup } from "./Lineup/Lineup";
@@ -7,12 +8,15 @@ import styles from "./index.module.css";
 
 const TsukuComi2025: FC = () => {
   return (
-    <div className={styles.container}>
-      <Header />
-      <FirstView />
-      <Lineup />
-      <Footer />
-    </div>
+    <>
+      <Loading />
+      <div className={styles.container}>
+        <Header />
+        <FirstView />
+        <Lineup />
+        <Footer />
+      </div>
+    </>
   );
 };
 
