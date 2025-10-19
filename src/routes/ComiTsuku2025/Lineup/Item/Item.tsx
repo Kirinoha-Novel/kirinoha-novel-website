@@ -6,7 +6,11 @@ type Props = ItemType;
 
 const Item: FC<Props> = (props: Props) => {
   return (
-    <div className={styles.item}>
+    <div
+      className={`${styles.item} ${
+        props.size === "Large" ? styles.largeItem : styles.smallItem
+      }`}
+    >
       <img
         className={styles.itemImage}
         src={props.imagePath}

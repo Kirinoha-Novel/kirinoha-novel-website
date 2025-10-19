@@ -12,7 +12,7 @@
 
 .textBox {
   height: var(--meisi-image-height);
-  width: 275.6px;
+  width: 300px;
   display: flex;
   flex-direction: column;
 }

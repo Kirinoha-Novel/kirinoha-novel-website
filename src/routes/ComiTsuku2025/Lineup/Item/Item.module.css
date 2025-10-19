@@ -1,15 +1,25 @@
 .item {
   --item-padding: 20px;
-  width: calc(350px - var(--item-padding) * 2);
   padding: var(--item-padding);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 }
 
+.largeItem {
+  width: calc(350px * 2);
+}
+
+.smallItem {
+  width: calc(350px - var(--item-padding) * 2);
+}
+
 .itemImage {
+  display: block;
   object-fit: cover;
   object-position: top;
-  width: 100%;
-  height: auto;
+  height: 400px;
+  width: auto;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .itemName {
