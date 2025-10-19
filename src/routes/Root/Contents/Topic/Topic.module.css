@@ -1,0 +1,28 @@
+.topic {
+  opacity: 0;
+  text-align: center;
+  font-size: var(--text-3xl);
+  margin: 0 0 var(--space-base) 0;
+}
+
+.description {
+  text-align: center;
+  font-size: var(--text-lg);
+  margin: 0 0 var(--space-lg) 0;
+  opacity: 0;
+}
+
+.link {
+  width: fit-content;
+  padding: var(--space-base);
+  margin: 0 auto var(--space-3xl) auto;
+  border-radius: 10px;
+  display: block;
+  opacity: 0;
+  text-align: center;
+  font-size: var(--text-xl);
+  text-decoration: underline;
+  position: relative;
+  z-index: 2;
+  background-color: var(--bg-color-brown);
+}
