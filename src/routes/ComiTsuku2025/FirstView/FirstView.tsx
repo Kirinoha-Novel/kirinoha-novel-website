@@ -55,11 +55,14 @@ const FirstView: FC = () => {
     <div className={styles.firstView}>
       <div className={styles.textBox}>
         <div className={styles.titleBox}>
-          <h1 className={styles.title}>Comic Tsukuba</h1>
+          <h1 className={styles.title}>:&gt; Comic Tsukuba</h1>
         </div>
         <div className={styles.descriptionBox}>
           <div className={styles.descriptionWrapper}>
             <p className={styles.description}>:Kirinoha-Novel</p>
+            <p className={styles.description}>
+              Date&gt; 2025/11/02 ~ 2025/11/3
+            </p>
             {remainingTime ? (
               <p className={styles.description}>
                 Remaining Time&gt; {remainingTime.days}D_
