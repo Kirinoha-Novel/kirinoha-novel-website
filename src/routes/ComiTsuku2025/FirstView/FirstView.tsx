@@ -55,7 +55,7 @@ const FirstView: FC = () => {
     <div className={styles.firstView}>
       <div className={styles.textBox}>
         <div className={styles.titleBox}>
-          <h1 className={styles.title}>TsukuComi 2025</h1>
+          <h1 className={styles.title}>ComiTsuku 2025</h1>
         </div>
         <div className={styles.descriptionBox}>
           <div className={styles.descriptionWrapper}>

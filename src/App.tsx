@@ -40,7 +40,7 @@ const App: FC = () => {
         <div data-animate="cursor" className={styles.cursor} />
         <Routes>
           <Route path="/" element={<Root />} />
-          <Route path="/tsukucomi2025" element={<TsukuComi2025 />} />
+          <Route path="/comitsuku2025" element={<TsukuComi2025 />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
