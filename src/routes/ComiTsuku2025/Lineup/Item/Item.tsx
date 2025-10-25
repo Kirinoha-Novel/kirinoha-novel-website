@@ -18,7 +18,7 @@ const Item: FC<Props> = (props: Props) => {
         src={props.imagePath}
         width={props.width}
         alt={`${props.name}の画像`}
-        effect="black-and-white"
+        effect="opacity"
       />
       <h2 className={styles.itemName}>{props.name}</h2>
       <p className={styles.itemPrice}>{props.price}円</p>
