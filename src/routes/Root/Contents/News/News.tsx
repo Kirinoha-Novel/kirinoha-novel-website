@@ -20,7 +20,7 @@ export const News: FC<Props> = (props: Props) => {
       scrollTrigger: {
         scroller: props.contentsRef.current,
         trigger: ulWrapper.current,
-        start: "top center",
+        start: "top center+=25%",
         markers: false,
       },
     });

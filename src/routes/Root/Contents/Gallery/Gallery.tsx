@@ -21,7 +21,7 @@ export const Gallery: FC<Props> = (props: Props) => {
         scrollTrigger: {
           scroller: props.contentsRef.current,
           trigger: frame.current,
-          start: "top center",
+          start: "top center+=25%",
           markers: false,
         },
       });

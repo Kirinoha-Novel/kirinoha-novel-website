@@ -53,7 +53,7 @@ export const EventPc: FC<EventProps> = (props: EventProps) => {
       scrollTrigger: {
         scroller: props.contentsRef.current,
         trigger: image.current,
-        start: "top center",
+        start: "top center+=25%",
         markers: false,
       },
     });
@@ -65,7 +65,7 @@ export const EventPc: FC<EventProps> = (props: EventProps) => {
       scrollTrigger: {
         scroller: props.contentsRef.current,
         trigger: text.current,
-        start: "top center",
+        start: "top center+=25%",
         markers: false,
       },
     });
@@ -76,7 +76,7 @@ export const EventPc: FC<EventProps> = (props: EventProps) => {
       scrollTrigger: {
         scroller: props.contentsRef.current,
         trigger: date.current,
-        start: "top center",
+        start: "top center+=25%",
         markers: false,
       },
     });

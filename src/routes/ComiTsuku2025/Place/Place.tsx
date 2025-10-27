@@ -1,9 +1,16 @@
 import type { FC } from "react";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import {
+  LazyLoadImage,
+  type ScrollPosition,
+} from "react-lazy-load-image-component";
 import styles from "./Place.module.css";
 import placeImage from "../assets/place.webp";
 
-const Place: FC = () => {
+type Props = {
+  scrollPosition: ScrollPosition;
+};
+
+const Place: FC<Props> = (props) => {
   return (
     <>
       <h1 className={styles.title}>Place</h1>
@@ -18,6 +25,7 @@ const Place: FC = () => {
           width={2048}
           alt="販売場所の情報の地図画像"
           effect="opacity"
+          scrollPosition={props.scrollPosition}
         />
       </div>
     </>
