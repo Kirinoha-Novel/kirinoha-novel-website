@@ -1,4 +1,5 @@
 import { type FC } from "react";
+import { Loading } from "./Loading/Loading";
 import { Header } from "./Header/Header";
 import { FirstView } from "./FirstView/FirstView";
 import { Place } from "./Place/Place";
@@ -17,6 +18,7 @@ type Props = {
 const TsukuComi2025Page: FC<Props> = (props) => {
   return (
     <>
+      <Loading />
       <div className={styles.container}>
         <Header />
         <FirstView />
