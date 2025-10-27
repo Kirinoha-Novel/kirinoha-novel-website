@@ -20,7 +20,7 @@ const Topic: FC<Props> = (props: Props) => {
       scrollTrigger: {
         scroller: props.contentsRef.current,
         trigger: topic.current,
-        start: "top center",
+        start: "top center+=25%",
         markers: false,
       },
     });
@@ -32,7 +32,7 @@ const Topic: FC<Props> = (props: Props) => {
       scrollTrigger: {
         scroller: props.contentsRef.current,
         trigger: description.current,
-        start: "top center",
+        start: "top center+=25%",
         markers: false,
       },
     });
@@ -44,7 +44,7 @@ const Topic: FC<Props> = (props: Props) => {
       scrollTrigger: {
         scroller: props.contentsRef.current,
         trigger: link.current,
-        start: "top center",
+        start: "top center+=25%",
         markers: false,
       },
     });

@@ -5,19 +5,28 @@ import { Place } from "./Place/Place";
 import { Lineup } from "./Lineup/Lineup";
 import { Footer } from "./Footer/Footer";
 import styles from "./index.module.css";
+import {
+  trackWindowScroll,
+  type ScrollPosition,
+} from "react-lazy-load-image-component";
 
-const TsukuComi2025: FC = () => {
+type Props = {
+  scrollPosition: ScrollPosition;
+};
+
+const TsukuComi2025Page: FC<Props> = (props) => {
   return (
     <>
       <div className={styles.container}>
         <Header />
         <FirstView />
-        <Place />
-        <Lineup />
+        <Place scrollPosition={props.scrollPosition} />
+        <Lineup scrollPosition={props.scrollPosition} />
         <Footer />
       </div>
     </>
   );
 };
 
+const TsukuComi2025 = trackWindowScroll(TsukuComi2025Page);
 export default TsukuComi2025;

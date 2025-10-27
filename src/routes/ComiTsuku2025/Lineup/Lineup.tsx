@@ -2,6 +2,7 @@ import { type FC } from "react";
 import styles from "./Lineup.module.css";
 import { Item } from "./Item/Item";
 import { type ItemType, type SizeType } from "./types";
+import type { ScrollPosition } from "react-lazy-load-image-component";
 
 const items: ItemType[] = [
   {
@@ -41,13 +42,17 @@ const items: ItemType[] = [
   },
 ];
 
-const Lineup: FC = () => {
+type Props = {
+  scrollPosition: ScrollPosition;
+};
+
+const Lineup: FC<Props> = (props) => {
   return (
     <>
       <h1 className={styles.title}>Lineup</h1>
       <div className={styles.items}>
         {items.map((item, index) => (
-          <Item key={index} {...item} />
+          <Item key={index} {...item} scrollPosition={props.scrollPosition} />
         ))}
       </div>
     </>
