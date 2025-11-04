@@ -53,10 +53,12 @@ const Topic: FC<Props> = (props: Props) => {
   return (
     <section>
       <h2 className={styles.topic} ref={topic}>
-        コミックつくばに出展!
+        コミックつくばに出展しました！
       </h2>
       <p className={styles.description} ref={description}>
-        11/2,3の雙峰祭にて開催されるコミックつくばに出展します。
+        11/2,3の雙峰祭にて開催されたコミックつくばに出展いたしました。
+        <br />
+        立ち寄ってくださった皆さま、誠にありがとうございました！
       </p>
       <a
         className={styles.link}
