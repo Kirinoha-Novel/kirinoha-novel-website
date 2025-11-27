@@ -57,7 +57,7 @@ npm run preview
 
 一つのNewsは以下のような形で記述します。
 
-```typescript
+```ts
   {
     url: "News内容に関連したURLをここに記述してください。",
     date: "日付を YYYY/MM/DD の形式で記述してください。",
@@ -71,7 +71,7 @@ Newsは、`infoArray`配列の最上部が最新のNewsとして表示されま�
 
 以下は、`src/news.ts`の内容の例です。
 
-```typescript
+```ts
 
 import type { InfoProps } from "./routes/Root/Contents/News/info";
 
@@ -108,7 +108,7 @@ export const infoArray: InfoProps[] = [
 
 一つのProductsは以下のような形で記述します。
 
-```typescript
+```ts
   {
     imagePath: "/products/<画像ファイル名> というパスをここに記述してください。",
     title: "タイトルをここに記述してください。",
@@ -123,7 +123,7 @@ Productsは、`productsArray`配列の最上部が最新のProductsとして表�
 
 以下は、`src/products.ts`の内容の例です。
 
-```typescript
+```ts
 import type { ProductsProps } from "./routes/Root/Contents/Products/products";
 
 //* Products Information *//
@@ -164,7 +164,7 @@ export const productsArray: ProductsProps[] = [
 
 一つのGalleryは以下のような形で記述します。
 
-```typescript
+```ts
   {
     imagePath: "/gallery/<画像ファイル名> というパスをここに記述してください。",
     style: "cover または contain をここに記述してください。",
@@ -183,7 +183,7 @@ Galleryは、`galleryArray`配列の最上部が最新のGalleryとして表示�
 
 以下は、`src/gallery.ts`の内容の例です。
 
-```typescript
+```ts
 import type { GalleryProps } from "./routes/Root/Contents/Gallery/gallery";
 
 //* Gallery Images *//
