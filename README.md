@@ -65,7 +65,7 @@ npm run preview
   },
 ```
 
-Newsは、`InfoArray`配列の最上部が最新のNewsとして表示されます。
+Newsは、`infoArray`配列の最上部が最新のNewsとして表示されます。
 
 そのため、追加するNewsを配列の最上部に追加してください。
 
@@ -117,7 +117,7 @@ export const infoArray: InfoProps[] = [
   },
 ```
 
-Productsは、`ProductsArray`配列の最上部が最新のProductsとして表示されます。
+Productsは、`productsArray`配列の最上部が最新のProductsとして表示されます。
 
 そのため、追加するProductsを配列の最上部に追加してください。
 
@@ -171,7 +171,7 @@ export const productsArray: ProductsProps[] = [
   },
 ```
 
-Galleryは、`GalleryArray`配列の最上部が最新のGalleryとして表示されます。
+Galleryは、`galleryArray`配列の最上部が最新のGalleryとして表示されます。
 
 そのため、追加するGalleryを配列の最上部に追加してください。
 
