@@ -1,10 +1,38 @@
 # 「きりのはのべる」のウェブサイト
 
+このレポジトリは、「きりのはのべる」のウェブサイトとして機能します。
+
 ## セットアップ
+
+### 前提条件
+
+以下がインストールされていることを確認してください。
+
+- Node.js
+- npm
+- git
+
+Visual Studio Codeを使用している場合は、以下の拡張機能をインストールしてください。
+
+- ecmel.vscode-html-css
+- dsznajder.es7-react-js-snippets
+- esbenp.prettier-vscode
+- dbaeumer.vscode-eslint
+
+### 手順
+
+以下の手順に従って、開発環境を構築してください。
+
+1. レポジトリをcloneして、レポジトリのディレクトリに移動
 
 ```sh
 git clone https://github.com/Kirinoha-Novel/kirinoha-novel.git
 cd kirinoha-novel
+```
+
+2. 以下のコマンドをレポジトリのルートで実行
+
+```sh
 npm install
 ```
 
@@ -37,7 +65,7 @@ npm run preview
   },
 ```
 
-Newsは、`InfoProps`配列の最上部が最新のNewsとして表示されます。
+Newsは、`InfoArray`配列の最上部が最新のNewsとして表示されます。
 
 そのため、追加するNewsを配列の最上部に追加してください。
 
@@ -89,7 +117,7 @@ export const infoArray: InfoProps[] = [
   },
 ```
 
-Productsは、`ProductsProps`配列の最上部が最新のProductsとして表示されます。
+Productsは、`ProductsArray`配列の最上部が最新のProductsとして表示されます。
 
 そのため、追加するProductsを配列の最上部に追加してください。
 
@@ -143,7 +171,7 @@ export const productsArray: ProductsProps[] = [
   },
 ```
 
-Galleryは、`GalleryProps`配列の最上部が最新のGalleryとして表示されます。
+Galleryは、`GalleryArray`配列の最上部が最新のGalleryとして表示されます。
 
 そのため、追加するGalleryを配列の最上部に追加してください。
 
@@ -160,7 +188,7 @@ import type { GalleryProps } from "./routes/Root/Contents/Gallery/gallery";
 
 //* Gallery Images *//
 /*
-export const infoArray: InfoProps[] = [
+export const GalleryArray: GalleryProps[] = [
   # small index (New Images)
   {
     imagePath: "/gallery/natsuiro-key-visual.webp",
