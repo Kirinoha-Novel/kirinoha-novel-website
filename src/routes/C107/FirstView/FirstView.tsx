@@ -12,7 +12,9 @@ const FirstView: FC = () => {
             <div className={styles.logo}></div>
             <div className={styles.ticketInfo}>
               <p className={styles.c107}>コミックマーケット107</p>
-              <p className={styles.circle}>きりのはのべる</p>
+              <p className={styles.circle}>
+                &emsp;南地区 Lブロック - 21b&emsp;
+              </p>
             </div>
             <p className={styles.day}>2日目</p>
             <p className={styles.date}>December</p>
