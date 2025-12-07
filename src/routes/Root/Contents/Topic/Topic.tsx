@@ -63,7 +63,7 @@ const Topic: FC<Props> = (props: Props) => {
       <a
         className={styles.link}
         ref={link}
-        href="/comitsuku2025"
+        href="/ct1"
         rel="noopener noreferrer"
       >
         コミックつくば 特設サイトはこちらから！
