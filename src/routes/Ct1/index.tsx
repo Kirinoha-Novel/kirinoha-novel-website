@@ -16,7 +16,7 @@ type Props = {
   scrollPosition: ScrollPosition;
 };
 
-const TsukuComi2025Page: FC<Props> = (props) => {
+const Ct1Page: FC<Props> = (props) => {
   return (
     <>
       <Loading />
@@ -32,5 +32,5 @@ const TsukuComi2025Page: FC<Props> = (props) => {
   );
 };
 
-const TsukuComi2025 = trackWindowScroll(TsukuComi2025Page);
-export default TsukuComi2025;
+const Ct1 = trackWindowScroll(Ct1Page);
+export default Ct1;

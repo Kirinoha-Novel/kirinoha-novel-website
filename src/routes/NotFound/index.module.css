@@ -27,7 +27,6 @@
   border-radius: 10px;
   display: block;
   position: relative;
-  z-index: 2;
   cursor: pointer;
   background-color: var(--bg-color-brown);
 }

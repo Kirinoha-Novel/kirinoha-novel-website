@@ -1,0 +1,20 @@
+.title {
+  margin: 0 0 50px 0;
+  font-size: var(--text-3xl);
+  text-align: center;
+}
+
+.subTitle {
+  font-size: var(--text-base);
+  text-align: center;
+}
+
+.description {
+  font-size: var(--text-2xl);
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+
+.box {
+  margin: 0 0 150px 0;
+}

@@ -23,6 +23,5 @@
   font-size: var(--text-xl);
   text-decoration: underline;
   position: relative;
-  z-index: 2;
   background-color: var(--bg-color-brown);
 }

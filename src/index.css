@@ -4,7 +4,6 @@
   font-family: "Klee One", cursive;
   font-weight: 400;
   font-style: normal;
-  /* cursor: none !important; */
   color: var(--text-color);
 }
 
@@ -21,6 +20,7 @@ section {
 :root {
   --bg-color-brown: #e0d6be;
   --bg-color-beige: #f1e6dc;
+  --bg-color-cream: #f9f4ec;
 
   --text-color: #7b5f47;
 
