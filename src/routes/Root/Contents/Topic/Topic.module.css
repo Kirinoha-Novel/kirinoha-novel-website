@@ -8,8 +8,10 @@
 .description {
   text-align: center;
   font-size: var(--text-lg);
-  margin: 0 0 var(--space-lg) 0;
+  margin: 0 auto var(--space-lg) auto;
   opacity: 0;
+  width: calc(100% - 20px);
+  max-width: 800px;
 }
 
 .link {
@@ -21,7 +23,11 @@
   opacity: 0;
   text-align: center;
   font-size: var(--text-xl);
-  text-decoration: underline;
   position: relative;
   background-color: var(--bg-color-brown);
+}
+
+span {
+  display: inline-block;
+  text-decoration: underline;
 }
