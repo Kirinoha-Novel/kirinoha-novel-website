@@ -5,17 +5,15 @@
   border-bottom: 1px solid var(--text-color);
 }
 
-.link {
-  text-decoration: none;
-}
-
 .date {
   font-size: var(--text-base);
   display: inline-block;
   margin: 0 20px 0 0;
+  text-decoration: none;
 }
 
 .content {
   font-size: var(--text-lg);
   display: inline-block;
+  text-decoration: none;
 }

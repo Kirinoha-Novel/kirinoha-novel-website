@@ -27,13 +27,7 @@ type TextProps = {
 
 const Text: FC<TextProps> = (props: TextProps) => {
   return (
-    <a
-      href={props.url}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={styles.textWrapper}
-      ref={props.textRef}
-    >
+    <a href={props.url} className={styles.textWrapper} ref={props.textRef}>
       <h2 className={styles.title}>{props.title}</h2>
       <p className={styles.description}>{props.description}</p>
     </a>

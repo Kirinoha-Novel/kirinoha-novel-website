@@ -56,20 +56,17 @@ const Topic: FC<Props> = (props: Props) => {
         コミックマーケット C107に出展します！
       </h2>
       <p className={styles.description} ref={description}>
-        コミックマーケット C107の2日目（2025年12月31日（水））
-        に出展いたします。ブース番号は「南地区 Lブロック -
+        コミックマーケット C107の「2日目 (2025年12月31日 水曜日)」
+        に出展いたします。場所は「南地区 Lブロック -
         21b」です。新作のゲームの体験版の紹介やグッズの販売を予定しておりますので、
         ぜひお立ち寄りください！
       </p>
-      <a
-        className={styles.link}
-        ref={link}
-        href="/c107"
-        rel="noopener noreferrer"
-      >
-        <span>コミックマーケット C107&nbsp;</span>
-        <span>特設サイトはこちらから！</span>
-      </a>
+      <div className={styles.linkWrapper}>
+        <a className={styles.link} ref={link} href="/c107">
+          <span>コミックマーケット C107&nbsp;</span>
+          <span>特設サイトはこちら！</span>
+        </a>
+      </div>
     </section>
   );
 };

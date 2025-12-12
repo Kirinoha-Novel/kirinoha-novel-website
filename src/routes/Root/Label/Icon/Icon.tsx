@@ -9,12 +9,7 @@ type Props = {
 
 export const Icon: FC<Props> = (props: Props) => {
   return (
-    <a
-      href={props.url}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={styles.link}
-    >
+    <a href={props.url} className={styles.link}>
       <props.Icon />
     </a>
   );

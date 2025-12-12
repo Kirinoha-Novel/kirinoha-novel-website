@@ -4,7 +4,7 @@ import styles from "./Header.module.css";
 const Header: FC = () => {
   return (
     <header className={styles.header}>
-      <a className={styles.label} href="/" rel="noopener noreferrer">
+      <a className={styles.label} href="/">
         きりのはのべる
       </a>
     </header>
