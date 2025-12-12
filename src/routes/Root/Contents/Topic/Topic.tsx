@@ -53,20 +53,22 @@ const Topic: FC<Props> = (props: Props) => {
   return (
     <section>
       <h2 className={styles.topic} ref={topic}>
-        コミックつくばに出展しました！
+        コミックマーケット C107に出展します！
       </h2>
       <p className={styles.description} ref={description}>
-        11/2,3の雙峰祭にて開催されたコミックつくばに出展いたしました。
-        <br />
-        立ち寄ってくださった皆さま、誠にありがとうございました！
+        コミックマーケット C107の2日目（2025年12月31日（水））
+        に出展いたします。ブース番号は「南地区 Lブロック -
+        21b」です。新作のゲームの体験版の紹介やグッズの販売を予定しておりますので、
+        ぜひお立ち寄りください！
       </p>
       <a
         className={styles.link}
         ref={link}
-        href="/ct1"
+        href="/c107"
         rel="noopener noreferrer"
       >
-        コミックつくば 特設サイトはこちらから！
+        <span>コミックマーケット C107&nbsp;</span>
+        <span>特設サイトはこちらから！</span>
       </a>
     </section>
   );
