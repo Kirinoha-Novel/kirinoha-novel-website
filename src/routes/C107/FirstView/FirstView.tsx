@@ -5,9 +5,13 @@ const FirstView: FC = () => {
   return (
     <div className={styles.box}>
       <div className={`${styles.frame} ${styles.upperFrame}`}>Day 2</div>
-      <div className={styles.content}>
-        <div className={styles.mainContent}></div>
-        <p className={`${styles.phrase} ${styles.lowerPhrase}`}>COMIC MARKET</p>
+      <div className={styles.photoFrame}>
+        <div className={styles.content}>
+          <div className={styles.mainContent}></div>
+          <p className={`${styles.phrase} ${styles.lowerPhrase}`}>
+            COMIC MARKET
+          </p>
+        </div>
       </div>
       <div className={`${styles.frame} ${styles.lowerFrame}`}>
         South Area L Block 21b

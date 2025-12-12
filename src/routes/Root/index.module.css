@@ -10,7 +10,6 @@
   position: fixed;
   bottom: 0;
   left: 0;
-  z-index: 2;
 }
 
 @media (max-width: 1149px) {

@@ -12,15 +12,13 @@
   flex-grow: 0;
   margin: 20px;
 }
-.content {
+.photoFrame {
   flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  background-image: url(../assets/natsuiro.webp);
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
+  /* border: solid 1px #666; */
   transform: rotate(350deg);
+  padding: 30px;
+  background-color: #ffffff;
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.2);
 }
 .lowerFrame {
   flex-grow: 0;
@@ -48,22 +46,29 @@
 }
 
 /*** body content ***/
+.content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 /* inner layout */
 .mainContent {
   flex-grow: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-image: url(../assets/natsuiro.webp);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .lowerPhrase {
   flex-grow: 0;
-  text-align: right;
 }
 
 /*** phrase ***/
 .phrase {
-  font-size: var(--text-5xl);
+  font-size: var(--text-xl);
+  text-align: center;
   font-family: "Noto Sans JP", sans-serif;
+  margin: 20px 0 0 0;
 }
 
 /* .box {
