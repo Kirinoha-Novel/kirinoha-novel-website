@@ -7,6 +7,10 @@
   color: var(--text-color);
 }
 
+*::selection {
+  background-color: #cfcbff;
+}
+
 html,
 body {
   background-color: var(--bg-color-beige);
