@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import styles from "./Thanks.module.css";
 
-const Thanks: FC = () => {
+export const Thanks: FC = () => {
   return (
     <div className={styles.box}>
       <div className={styles.innerBox}>
@@ -15,5 +15,3 @@ const Thanks: FC = () => {
     </div>
   );
 };
-
-export { Thanks };

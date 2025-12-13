@@ -1,7 +1,7 @@
 import { type FC } from "react";
 import styles from "./Info.module.css";
 
-const Info: FC = () => {
+export const Info: FC = () => {
   return (
     <>
       <h1 className={styles.title}>出展情報</h1>
@@ -16,4 +16,3 @@ const Info: FC = () => {
     </>
   );
 };
-export { Info };

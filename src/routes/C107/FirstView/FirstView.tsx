@@ -1,7 +1,7 @@
 import { type FC } from "react";
 import styles from "./FirstView.module.css";
 
-const FirstView: FC = () => {
+export const FirstView: FC = () => {
   return (
     <div className={styles.box}>
       <div className={`${styles.frame} ${styles.upperFrame}`}>Day 2</div>
@@ -39,4 +39,3 @@ const FirstView: FC = () => {
     // </div>
   );
 };
-export { FirstView };

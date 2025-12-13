@@ -2,7 +2,7 @@ import { useEffect, useRef, type FC } from "react";
 import { gsap } from "gsap";
 import styles from "./Loading.module.css";
 
-const Loading: FC = () => {
+export const Loading: FC = () => {
   const overlay = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -34,5 +34,3 @@ const Loading: FC = () => {
 
   return <div className={styles.overlay} ref={overlay}></div>;
 };
-
-export { Loading };

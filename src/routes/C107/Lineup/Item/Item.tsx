@@ -8,7 +8,7 @@ import styles from "./Item.module.css";
 
 type Props = ItemType & { scrollPosition: ScrollPosition };
 
-const Item: FC<Props> = (props: Props) => {
+export const Item: FC<Props> = (props: Props) => {
   return (
     <div
       className={`${styles.item} ${
@@ -29,5 +29,3 @@ const Item: FC<Props> = (props: Props) => {
     </div>
   );
 };
-
-export { Item };

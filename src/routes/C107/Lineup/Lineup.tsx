@@ -46,7 +46,7 @@ type Props = {
   scrollPosition: ScrollPosition;
 };
 
-const Lineup: FC<Props> = (props) => {
+export const Lineup: FC<Props> = (props) => {
   return (
     <>
       <h1 className={styles.title}>製品情報</h1>
@@ -58,5 +58,3 @@ const Lineup: FC<Props> = (props) => {
     </>
   );
 };
-
-export { Lineup };
