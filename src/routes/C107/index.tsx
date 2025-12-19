@@ -4,6 +4,7 @@ import { Loading } from "./Loading/Loading";
 import { FirstView } from "./FirstView/FirstView";
 import { Topic } from "./Topic/Topic";
 import { Info } from "./Info/Info";
+import { Trial } from "./Trial/Trial";
 import { Footer } from "./Footer/Footer";
 // import {
 //   trackWindowScroll,
@@ -24,6 +25,7 @@ const C107: FC = () => {
         <FirstView />
         <Topic />
         <Info />
+        <Trial />
         {/* <Lineup scrollPosition={props.scrollPosition} /> */}
         <Footer />
       </div>
