@@ -1,7 +1,7 @@
 import { type FC } from "react";
 import styles from "./Topic.module.css";
 
-const Topic: FC = () => {
+export const Topic: FC = () => {
   return (
     <>
       <h1 className={styles.title}>メッセージ</h1>
@@ -20,4 +20,3 @@ const Topic: FC = () => {
     </>
   );
 };
-export { Topic };

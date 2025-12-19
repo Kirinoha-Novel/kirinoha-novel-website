@@ -10,7 +10,7 @@ type Props = {
   scrollPosition: ScrollPosition;
 };
 
-const Place: FC<Props> = (props) => {
+export const Place: FC<Props> = (props) => {
   return (
     <>
       <h1 className={styles.title}>Place</h1>
@@ -31,5 +31,3 @@ const Place: FC<Props> = (props) => {
     </>
   );
 };
-
-export { Place };

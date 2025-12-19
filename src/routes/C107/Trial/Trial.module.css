@@ -1,0 +1,28 @@
+.title {
+  margin: 0 0 50px 0;
+  font-size: var(--text-3xl);
+  text-align: center;
+}
+
+.description {
+  font-size: var(--text-xl);
+  text-align: center;
+  margin: 0 auto 20px auto;
+  max-width: 800px;
+}
+
+.linkWrapper {
+  width: calc(100% - 20px);
+  padding: 0 10px;
+}
+
+.link {
+  width: fit-content;
+  padding: var(--space-base);
+  margin: 60px auto var(--space-3xl) auto;
+  border-radius: 10px;
+  display: block;
+  text-align: center;
+  font-size: var(--text-xl);
+  background-color: var(--bg-color-brown);
+}

@@ -14,7 +14,6 @@
 }
 .photoFrame {
   flex-grow: 1;
-  /* border: solid 1px #666; */
   transform: rotate(350deg);
   padding: 30px;
   background-color: #ffffff;
@@ -45,26 +44,21 @@
   margin-left: 20px;
 }
 
-/*** body content ***/
+/*** photo ***/
 .content {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
-/* inner layout */
-.mainContent {
+.photo {
   flex-grow: 1;
   background-image: url(../assets/natsuiro.webp);
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.lowerPhrase {
-  flex-grow: 0;
-}
-
-/*** phrase ***/
 .phrase {
+  flex-grow: 0;
   font-size: var(--text-xl);
   text-align: center;
   font-family: "Noto Sans JP", sans-serif;

@@ -10,7 +10,7 @@ type RemainingTime = {
   milliseconds: number;
 };
 
-const FirstView: FC = () => {
+export const FirstView: FC = () => {
   const [remainingTime, setRemainingTime] = useState<RemainingTime | null>(
     null
   );
@@ -120,5 +120,3 @@ const FirstView: FC = () => {
     </>
   );
 };
-
-export { FirstView };
