@@ -6,18 +6,17 @@ import { Topic } from "./Topic/Topic";
 import { Info } from "./Info/Info";
 import { Trial } from "./Trial/Trial";
 import { Footer } from "./Footer/Footer";
-// import {
-//   trackWindowScroll,
-//   type ScrollPosition,
-// } from "react-lazy-load-image-component";
-// import { Lineup } from "./Lineup/Lineup";
+import {
+  trackWindowScroll,
+  type ScrollPosition,
+} from "react-lazy-load-image-component";
+import { Lineup } from "./Lineup/Lineup";
 
-// type Props = {
-//   scrollPosition: ScrollPosition;
-// };
+type Props = {
+  scrollPosition: ScrollPosition;
+};
 
-// const C107Page: FC<Props> = (props) => {
-const C107: FC = () => {
+const C107Page: FC<Props> = (props) => {
   return (
     <>
       <Loading />
@@ -26,12 +25,12 @@ const C107: FC = () => {
         <Topic />
         <Info />
         <Trial />
-        {/* <Lineup scrollPosition={props.scrollPosition} /> */}
+        <Lineup scrollPosition={props.scrollPosition} />
         <Footer />
       </div>
     </>
   );
 };
 
-// const C107 = trackWindowScroll(C107Page);
+const C107 = trackWindowScroll(C107Page);
 export default C107;

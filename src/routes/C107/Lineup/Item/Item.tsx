@@ -25,7 +25,9 @@ export const Item: FC<Props> = (props: Props) => {
         scrollPosition={props.scrollPosition}
       />
       <h2 className={styles.itemName}>{props.name}</h2>
-      <p className={styles.itemPrice}>{props.price}円</p>
+      <p className={styles.itemPrice}>
+        {props.price === 0 ? "無料" : `${props.price}円`}
+      </p>
     </div>
   );
 };

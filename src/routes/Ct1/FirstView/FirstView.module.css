@@ -33,6 +33,7 @@
 }
 
 .titleBox {
+  position: relative;
   height: 50%;
   width: auto;
 }
@@ -51,6 +52,7 @@
 }
 
 .descriptionBox {
+  position: relative;
   height: 50%;
   width: auto;
 }
