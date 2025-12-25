@@ -7,7 +7,7 @@ import type { ScrollPosition } from "react-lazy-load-image-component";
 const items: ItemType[] = [
   {
     size: "Large" satisfies SizeType,
-    imagePath: "/c107/shikishi.webp",
+    imagePath: "/c107/trial-distribution-card.webp",
     width: 800,
     name: "体験版配布カード",
     price: 0,
@@ -21,45 +21,38 @@ const items: ItemType[] = [
   } satisfies ItemType,
   {
     size: "Small" satisfies SizeType,
-    imagePath: "/c107/sticker.webp",
+    imagePath: "/c107/sticker-cat-ears.webp",
     width: 2119,
     name: "猫耳 ステッカー",
     price: 200,
   } satisfies ItemType,
   {
     size: "Small" satisfies SizeType,
-    imagePath: "/c107/sticker.webp",
+    imagePath: "/c107/sticker-maid.webp",
     width: 2119,
     name: "メイド ステッカー",
     price: 200,
   } satisfies ItemType,
   {
     size: "Small" satisfies SizeType,
-    imagePath: "/c107/sticker.webp",
+    imagePath: "/c107/sticker-bunny.webp",
     width: 2119,
     name: "バニー ステッカー",
     price: 200,
   } satisfies ItemType,
   {
     size: "Small" satisfies SizeType,
-    imagePath: "/c107/post-card1.webp",
+    imagePath: "/c107/post-card-key-visual.webp",
     width: 1461,
     name: "キービジュアル ポストカード",
     price: 100,
   } satisfies ItemType,
   {
     size: "Small" satisfies SizeType,
-    imagePath: "/c107/post-card2.webp",
+    imagePath: "/c107/post-card-private-clothes.webp",
     width: 1461,
     name: "私服 ポストカード",
     price: 100,
-  } satisfies ItemType,
-  {
-    size: "Small" satisfies SizeType,
-    imagePath: "/c107/shikishi.webp",
-    width: 800,
-    name: "直筆ミニ色紙",
-    price: 1500,
   } satisfies ItemType,
   {
     size: "Small" satisfies SizeType,
@@ -71,6 +64,13 @@ const items: ItemType[] = [
   {
     size: "Small" satisfies SizeType,
     imagePath: "/c107/shikishi.webp",
+    width: 800,
+    name: "直筆ミニ色紙",
+    price: 1500,
+  } satisfies ItemType,
+  {
+    size: "Small" satisfies SizeType,
+    imagePath: "/c107/business-card.webp",
     width: 800,
     name: "サークル名刺",
     price: 0,
