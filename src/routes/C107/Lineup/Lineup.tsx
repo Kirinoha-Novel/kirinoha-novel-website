@@ -66,7 +66,7 @@ const items: ItemType[] = [
     imagePath: "/c107/shikishi.webp",
     width: 800,
     name: "直筆ミニ色紙",
-    price: 1500,
+    price: 3000,
   } satisfies ItemType,
   {
     size: "Small" satisfies SizeType,
