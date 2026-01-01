@@ -2,6 +2,7 @@ import type { FC } from "react";
 import styles from "./index.module.css";
 import { Loading } from "./Loading/Loading";
 import { FirstView } from "./FirstView/FirstView";
+import { Thanks } from "./Thanks/Thanks";
 import { Topic } from "./Topic/Topic";
 import { Info } from "./Info/Info";
 import { Trial } from "./Trial/Trial";
@@ -22,6 +23,7 @@ const C107Page: FC<Props> = (props) => {
       <Loading />
       <div className={styles.container}>
         <FirstView />
+        <Thanks />
         <Topic />
         <Info />
         <Trial />
