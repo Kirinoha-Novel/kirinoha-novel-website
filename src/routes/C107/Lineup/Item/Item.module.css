@@ -26,14 +26,17 @@
   display: block !important;
   margin: 0 auto;
   height: 400px;
-  width: fit-content !important;
+  width: 100% !important;
 }
 
 .itemImage {
   object-fit: cover;
   object-position: 50% 50%;
   height: 400px;
-  width: 100%;
+  width: auto;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
 }
 
 .itemName {
