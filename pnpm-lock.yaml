@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@gsap/react':
         specifier: ^2.1.2
-        version: 2.1.2(gsap@3.15.0)(react@19.2.1)
+        version: 2.1.2(gsap@3.15.0)(react@19.2.7)
       '@types/react-lazy-load-image-component':
         specifier: ^1.6.4
         version: 1.6.5
@@ -18,30 +18,30 @@ importers:
         specifier: ^3.13.0
         version: 3.15.0
       react:
-        specifier: ^19.1.1
-        version: 19.2.1
+        specifier: ^19.2.7
+        version: 19.2.7
       react-dom:
-        specifier: ^19.1.1
-        version: 19.2.1(react@19.2.1)
+        specifier: ^19.2.7
+        version: 19.2.7(react@19.2.7)
       react-icons:
         specifier: ^5.5.0
-        version: 5.7.0(react@19.2.1)
+        version: 5.7.0(react@19.2.7)
       react-lazy-load-image-component:
         specifier: ^1.6.3
-        version: 1.6.3(react@19.2.1)
+        version: 1.6.3(react@19.2.7)
       react-router:
         specifier: ^7.8.2
-        version: 7.18.1(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+        version: 7.18.1(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
     devDependencies:
       '@eslint/js':
         specifier: ^9.33.0
         version: 9.39.5
       '@types/react':
-        specifier: ^19.1.10
-        version: 19.2.7
+        specifier: ^19.2.17
+        version: 19.2.17
       '@types/react-dom':
-        specifier: ^19.1.7
-        version: 19.2.3(@types/react@19.2.7)
+        specifier: ^19.2.3
+        version: 19.2.3(@types/react@19.2.17)
       '@vitejs/plugin-react-swc':
         specifier: ^4.0.0
         version: 4.3.1(vite@7.3.6)
@@ -61,7 +61,7 @@ importers:
         specifier: ~5.9.0
         version: 5.9.3
       typescript-eslint:
-        specifier: ^8.64.0
+        specifier: ^8.39.1
         version: 8.64.0(eslint@9.39.5)(typescript@5.9.3)
       vite:
         specifier: ^7.1.2
@@ -769,8 +769,8 @@ packages:
   '@types/react-lazy-load-image-component@1.6.5':
     resolution: {integrity: sha512-Pyhy/H3oFqHqiCfH/97y4YAc4du04qs54g+9oC08nbRSr2dq3wIqVOY/3VyKxWU1/f42BgjRgMAJ8TyB2mK92A==}
 
-  '@types/react@19.2.7':
-    resolution: {integrity: sha512-MWtvHrGZLFttgeEj28VXHxpmwYbor/ATPYbBfSFZEIRK0ecCFLl2Qo55z52Hss+UV9CRN7trSeq1zbgx7YDWWg==}
+  '@types/react@19.2.17':
+    resolution: {integrity: sha512-MXfmqaVPEVgkBT/aY0aGCkRWWtByiYQXo3xdQ8r5RzuFrPiRn8Gar2tQdXSUQ2GKV3bkXckek89V8wQBY2Q/Aw==}
 
   '@typescript-eslint/eslint-plugin@8.64.0':
     resolution: {integrity: sha512-CGvQPBxN3wZLu6Rz2kFUpZeoCm78xUic92ck39KPePkO1NPOwjCqdQnm5Q87tpWw9vcBvW8XLrDXjH9PWYtJ3Q==}
@@ -1181,10 +1181,10 @@ packages:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
 
-  react-dom@19.2.1:
-    resolution: {integrity: sha512-ibrK8llX2a4eOskq1mXKu/TGZj9qzomO+sNfO98M6d9zIPOEhlBkMkBUBLd1vgS0gQsLDBzA+8jJBVXDnfHmJg==}
+  react-dom@19.2.7:
+    resolution: {integrity: sha512-t0BRVXvbiE/o20Hfw669rLbMCDWtYZLvmJigy2f0MxsXF+71pxhR3xOkspmsO8h3ZlNzyibAmtCa3l4lYKk6gQ==}
     peerDependencies:
-      react: ^19.2.1
+      react: ^19.2.7
 
   react-icons@5.7.0:
     resolution: {integrity: sha512-LBLy340Rzqy6+/yVhZKT3B/QpP1BZaesGqasf09HPOBzRarcDIFH0WwXlXQfE7q7ipxK4MSiC5DIBWURCny6fw==}
@@ -1206,8 +1206,8 @@ packages:
       react-dom:
         optional: true
 
-  react@19.2.1:
-    resolution: {integrity: sha512-DGrYcCWK7tvYMnWh79yrPHt+vdx9tY+1gPZa7nJQtO/p8bLTDaHp4dzwEhQB7pZ4Xe3ok4XKuEPrVuc+wlpkmw==}
+  react@19.2.7:
+    resolution: {integrity: sha512-HNe9WslTbXmFK8o8cmwgAeJFSBvt1bPdHCVKtaaV+WlAN36mpT4hcRpwbf3fY56ar2oIXzsBpOAiIRHAdY0OlQ==}
     engines: {node: '>=0.10.0'}
 
   resolve-from@4.0.0:
@@ -1541,10 +1541,10 @@ snapshots:
       '@eslint/core': 0.17.0
       levn: 0.4.1
 
-  '@gsap/react@2.1.2(gsap@3.15.0)(react@19.2.1)':
+  '@gsap/react@2.1.2(gsap@3.15.0)(react@19.2.7)':
     dependencies:
       gsap: 3.15.0
-      react: 19.2.1
+      react: 19.2.7
 
   '@humanfs/core@0.19.2':
     dependencies:
@@ -1824,16 +1824,16 @@ snapshots:
 
   '@types/json-schema@7.0.15': {}
 
-  '@types/react-dom@19.2.3(@types/react@19.2.7)':
+  '@types/react-dom@19.2.3(@types/react@19.2.17)':
     dependencies:
-      '@types/react': 19.2.7
+      '@types/react': 19.2.17
 
   '@types/react-lazy-load-image-component@1.6.5':
     dependencies:
-      '@types/react': 19.2.7
+      '@types/react': 19.2.17
       csstype: 3.2.3
 
-  '@types/react@19.2.7':
+  '@types/react@19.2.17':
     dependencies:
       csstype: 3.2.3
 
@@ -2272,30 +2272,30 @@ snapshots:
 
   punycode@2.3.1: {}
 
-  react-dom@19.2.1(react@19.2.1):
+  react-dom@19.2.7(react@19.2.7):
     dependencies:
-      react: 19.2.1
+      react: 19.2.7
       scheduler: 0.27.0
 
-  react-icons@5.7.0(react@19.2.1):
+  react-icons@5.7.0(react@19.2.7):
     dependencies:
-      react: 19.2.1
+      react: 19.2.7
 
-  react-lazy-load-image-component@1.6.3(react@19.2.1):
+  react-lazy-load-image-component@1.6.3(react@19.2.7):
     dependencies:
       lodash.debounce: 4.0.8
       lodash.throttle: 4.1.1
-      react: 19.2.1
+      react: 19.2.7
 
-  react-router@7.18.1(react-dom@19.2.1(react@19.2.1))(react@19.2.1):
+  react-router@7.18.1(react-dom@19.2.7(react@19.2.7))(react@19.2.7):
     dependencies:
       cookie: 1.1.1
-      react: 19.2.1
+      react: 19.2.7
       set-cookie-parser: 2.7.2
     optionalDependencies:
-      react-dom: 19.2.1(react@19.2.1)
+      react-dom: 19.2.7(react@19.2.7)
 
-  react@19.2.1: {}
+  react@19.2.7: {}
 
   resolve-from@4.0.0: {}
 
