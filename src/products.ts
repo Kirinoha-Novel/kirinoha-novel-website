@@ -25,7 +25,7 @@ export const productsArray: ProductsProps[] = [
   {
     imagePath: "/products/dlsite.webp",
     title: "なついろにっき。販売開始",
-    description: "「なついろにっき。」を DLsite にてオンライン販売開始。",
+    description: "「なついろにっき。」の DLsite での販売を開始。",
     date: "2026/08/30",
     url: "https://www.dlsite.com/maniax/work/=/product_id/RJ01703526.html",
   },
