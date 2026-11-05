@@ -23,10 +23,16 @@ export const productsArray: ProductsProps[] = [
 */
 export const productsArray: ProductsProps[] = [
   {
+    imagePath: "/products/dlsite.webp",
+    title: "なついろにっき。販売開始",
+    description: "「なついろにっき。」を DLsite にてオンライン販売開始。",
+    date: "2026/08/30",
+    url: "https://www.dlsite.com/maniax/work/=/product_id/RJ01703526.html",
+  },
+  {
     imagePath: "/products/natsuiro.webp",
     title: "なついろにっき。",
-    description:
-      "きりのはのべる の最初の作品「なついろにっき。」の制作が開始。",
+    description: "きりのはのべる の最初の作品「なついろにっき。」の制作が開始。",
     date: "2025/08/24",
     url: "https://natsuiro.kirinohanovel.com",
   },
@@ -38,3 +44,4 @@ export const productsArray: ProductsProps[] = [
     url: "https://kirinohanovel.com",
   },
 ];
+
