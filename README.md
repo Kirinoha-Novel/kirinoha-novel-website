@@ -102,36 +102,36 @@ export const infoArray: InfoProps[] = [
 ]
 ```
 
-## `Products`の更新
+## `History`の更新
 
-`src/products.ts`の編集と`public/products/`配下への画像の追加を行ってください。
+`src/history.ts`の編集と`public/history/`配下への画像の追加を行ってください。
 
-一つのProductsは以下のような形で記述します。
+一つのHistoryは以下のような形で記述します。
 
 ```ts
   {
-    imagePath: "/products/<画像ファイル名> というパスをここに記述してください。",
+    imagePath: "/history/<画像ファイル名> というパスをここに記述してください。",
     title: "タイトルをここに記述してください。",
     description: "説明をここに記述してください。",
     date: "日付を YYYY/MM/DD の形式で記述してください。",
   },
 ```
 
-Productsは、`productsArray`配列の最上部が最新のProductsとして表示されます。
+Historyは、`historyArray`配列の最上部が最新のHistoryとして表示されます。
 
-そのため、追加するProductsを配列の最上部に追加してください。
+そのため、追加するHistoryを配列の最上部に追加してください。
 
-以下は、`src/products.ts`の内容の例です。
+以下は、`src/history.ts`の内容の例です。
 
 ```ts
-import type { ProductsProps } from "./routes/Root/Contents/Products/products";
+import type { HistoryProps } from "./routes/Root/Contents/History/history";
 
-//* Products Information *//
+//* History Information *//
 /*
-export const productsArray: ProductsProps[] = [
+export const historyArray: HistoryProps[] = [
   # small index (New Information)
   {
-    imagePath: "/products/natsuiro.webp",
+    imagePath: "/history/natsuiro.webp",
     title: "なついろにっき。",
     description:
       "きりのはのべるの最初の作品「なついろにっき。」を公開しました。",
@@ -140,16 +140,16 @@ export const productsArray: ProductsProps[] = [
   ...
   # large index (Old Information)
   {
-    imagePath: "/products/establish.webp",
+    imagePath: "/history/establish.webp",
     title: "きりのはのべる 発足",
     description: "きりのはのべるが発足しました。",
     date: "2025/07/26",
   },
 ]
 */
-export const productsArray: ProductsProps[] = [
+export const historyArray: HistoryProps[] = [
   {
-    imagePath: "/products/natsuiro.webp",
+    imagePath: "/history/natsuiro.webp",
     title: "なついろにっき。",
     description:
       "きりのはのべるの最初の作品「なついろにっき。」を公開しました。",

@@ -20,6 +20,11 @@ export const infoArray: InfoProps[] = [
 */
 export const infoArray: InfoProps[] = [
   {
+    url: "https://www.dlsite.com/maniax/work/=/product_id/RJ01703526.html",
+    date: "2026/08/30",
+    content: "製品版「なついろにっき。」販売開始！",
+  },
+  {
     url: "https://x.com/kirinohanovel/status/1962108105124360515",
     date: "2025/08/31",
     content: "「なついろにっき。」ティザーサイト公開",
@@ -45,3 +50,4 @@ export const infoArray: InfoProps[] = [
     content: "Xでの初投稿です！",
   },
 ];
+
