@@ -1,6 +1,26 @@
 .title {
+  width: fit-content;
   text-align: center;
   font-size: var(--text-3xl);
-  margin: var(--space-3xl) 0 var(--space-lg) 0;
+  letter-spacing: 0.08em;
+  margin: var(--space-3xl) auto var(--space-lg) auto;
+  scroll-margin-top: var(--space-xl);
   opacity: 0;
+}
+
+/* same colors as the index tabs */
+.title[id="news"] {
+  --marker-color: var(--moe-yellow);
+}
+
+.title[id="blog"] {
+  --marker-color: var(--moe-mint);
+}
+
+.title[id="history"] {
+  --marker-color: var(--moe-blue);
+}
+
+.title[id="gallery"] {
+  --marker-color: var(--moe-lavender);
 }

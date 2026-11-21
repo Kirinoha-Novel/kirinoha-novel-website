@@ -1,5 +1,4 @@
 .gallery {
-  width: 100%;
   max-width: 1048px;
   margin: 0 auto;
   display: flex;
@@ -13,23 +12,15 @@
   gap: 16px;
 }
 
-@media screen and (min-width: 1370px) {
-  .gallery {
-    width: 100%;
-    max-width: 1048px;
-  }
-}
-
+/* fit 4 / 3 / 2 / 1 columns of 250px works */
 @media screen and (max-width: 1369px) and (min-width: 860px) {
   .gallery {
-    width: 100%;
     max-width: 782px;
   }
 }
 
 @media screen and (max-width: 859px) and (min-width: 578px) {
   .gallery {
-    width: 100%;
     max-width: 516px;
   }
 }
@@ -43,4 +34,13 @@
 
 .work {
   opacity: 0;
+}
+
+/* stuck-on sticker tilt */
+.work:nth-child(odd) > div {
+  rotate: -2deg;
+}
+
+.work:nth-child(even) > div {
+  rotate: 2deg;
 }

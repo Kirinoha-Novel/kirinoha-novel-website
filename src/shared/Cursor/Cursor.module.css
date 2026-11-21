@@ -1,0 +1,90 @@
+/* hide the native cursor only while the custom cursor is active (set by JS) */
+@media (pointer: fine) {
+  :global(body).active * {
+    cursor: none !important;
+  }
+
+  :global(body).active .dot,
+  :global(body).active .ring {
+    display: block;
+  }
+}
+
+/* signal for JS: custom properties are not affected by `cursor: none` */
+:global(a),
+:global(button),
+:global(label),
+:global(select),
+:global(summary),
+:global([role="button"]),
+:global([tabindex]:not([tabindex="-1"])) {
+  --is-pointer: 1;
+}
+
+.dot,
+.ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  display: none;
+}
+
+.dot {
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background-color: var(--moe-blue-deep);
+  z-index: 9999;
+  /* never transition transform (updated every frame) */
+  transition:
+    clip-path 0.2s ease,
+    background-color 0.2s ease,
+    width 0.2s ease,
+    height 0.2s ease,
+    border-radius 0.2s ease;
+}
+
+/* upward triangle on clickable elements */
+.dotPointer {
+  background-color: var(--moe-pink-deep);
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 0;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.ring {
+  --ring-color: var(--moe-blue-deep);
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  border: 2px solid var(--ring-color);
+  background-color: color-mix(in srgb, var(--ring-color) 15%, transparent);
+  z-index: 9998;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.ringPointer {
+  --ring-color: var(--moe-pink-deep);
+}
+
+.clickLabel {
+  position: absolute;
+  top: calc(100% + 0.25rem);
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 500;
+  font-size: var(--text-lg);
+  color: var(--moe-pink-deep);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.clickLabelVisible {
+  opacity: 1;
+}

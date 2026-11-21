@@ -1,0 +1,34 @@
+import type { FC } from "react";
+import {
+  LazyLoadImage,
+  type ScrollPosition,
+} from "react-lazy-load-image-component";
+import type { ItemType } from "../types";
+import styles from "./Item.module.css";
+
+type Props = ItemType & { scrollPosition: ScrollPosition };
+
+export const Item: FC<Props> = (props: Props) => {
+  return (
+    <div
+      className={`${styles.item} ${
+        props.size === "Large" ? styles.largeItem : styles.smallItem
+      }`}
+    >
+      <LazyLoadImage
+        wrapperClassName={styles.itemImageWrapper}
+        className={styles.itemImage}
+        src={props.imagePath}
+        width={props.width}
+        height={props.height}
+        alt={`${props.name}の画像`}
+        effect="opacity"
+        scrollPosition={props.scrollPosition}
+      />
+      <h3 className={styles.itemName}>{props.name}</h3>
+      <p className={styles.itemPrice}>
+        {props.price === 0 ? "無料" : `${props.price}円`}
+      </p>
+    </div>
+  );
+};

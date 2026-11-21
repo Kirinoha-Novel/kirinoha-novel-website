@@ -111,11 +111,17 @@ export const infoArray: InfoProps[] = [
 ```ts
   {
     imagePath: "/history/<画像ファイル名> というパスをここに記述してください。",
+    width: 画像の幅 (px) をここに記述してください。,
+    height: 画像の高さ (px) をここに記述してください。,
     title: "タイトルをここに記述してください。",
     description: "説明をここに記述してください。",
     date: "日付を YYYY/MM/DD の形式で記述してください。",
+    url: "リンク先の URL をここに記述してください。",
   },
 ```
+
+`width` と `height` には画像の元の大きさを記述してください。読み込み中のレイアウトのずれを防ぐために使います。
+画像の大きさは、画像をブラウザで開くか、`ffprobe <画像ファイル>` などで確認できます。
 
 Historyは、`historyArray`配列の最上部が最新のHistoryとして表示されます。
 
@@ -132,6 +138,8 @@ export const historyArray: HistoryProps[] = [
   # small index (New Information)
   {
     imagePath: "/history/natsuiro.webp",
+    width: 1449,
+    height: 2048,
     title: "なついろにっき。",
     description:
       "きりのはのべるの最初の作品「なついろにっき。」を公開しました。",
@@ -141,6 +149,8 @@ export const historyArray: HistoryProps[] = [
   # large index (Old Information)
   {
     imagePath: "/history/establish.webp",
+    width: 2508,
+    height: 2508,
     title: "きりのはのべる 発足",
     description: "きりのはのべるが発足しました。",
     date: "2025/07/26",
@@ -150,6 +160,8 @@ export const historyArray: HistoryProps[] = [
 export const historyArray: HistoryProps[] = [
   {
     imagePath: "/history/natsuiro.webp",
+    width: 1449,
+    height: 2048,
     title: "なついろにっき。",
     description:
       "きりのはのべるの最初の作品「なついろにっき。」を公開しました。",
@@ -167,9 +179,14 @@ export const historyArray: HistoryProps[] = [
 ```ts
   {
     imagePath: "/gallery/<画像ファイル名> というパスをここに記述してください。",
+    alt: "画像の説明 (代替テキスト) をここに記述してください。",
+    width: 画像の幅 (px) をここに記述してください。,
+    height: 画像の高さ (px) をここに記述してください。,
     style: "cover または contain をここに記述してください。",
   },
 ```
+
+`alt` は画像が表示できないときや読み上げソフトで使われます。`width` と `height` には画像の元の大きさを記述してください。
 
 Galleryは、`galleryArray`配列の最上部が最新のGalleryとして表示されます。
 
@@ -192,12 +209,18 @@ export const GalleryArray: GalleryProps[] = [
   # small index (New Images)
   {
     imagePath: "/gallery/natsuiro-key-visual.webp",
+    alt: "「なついろにっき。」キービジュアル",
+    width: 7096,
+    height: 10031,
     style: "cover",
   },
   ...
   # large index (Old Images)
   {
     imagePath: "/gallery/establish.webp",
+    alt: "きりのはのべる 発足記念イラスト",
+    width: 2508,
+    height: 2508,
     style: "cover",
   },
 ]
@@ -205,6 +228,9 @@ export const GalleryArray: GalleryProps[] = [
 export const GalleryArray: GalleryProps[] = [
   {
     imagePath: "/gallery/natsuiro-key-visual.webp",
+    alt: "「なついろにっき。」キービジュアル",
+    width: 7096,
+    height: 10031,
     style: "cover",
   },
 ];

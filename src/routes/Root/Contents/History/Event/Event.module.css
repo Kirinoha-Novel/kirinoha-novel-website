@@ -1,11 +1,93 @@
+.event {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.imageWrapper {
+  opacity: 0;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.text {
+  display: block;
+  opacity: 0;
+}
+
+.title {
+  font-weight: 500;
+  color: var(--moe-blue-deep);
+  font-size: var(--text-2xl);
+}
+
+.description {
+  font-size: var(--text-lg);
+}
+
+.date {
+  display: block;
+  font-weight: 500;
+  color: var(--moe-blue-deep);
+  font-size: var(--text-base);
+  text-align: center;
+  opacity: 0;
+}
+
+/* mobile: image, text and date stacked */
 @media screen and (max-width: 800px) {
-  .pcView {
-    display: none;
+  .imageWrapper {
+    width: calc(100% - 10px * 2);
+    max-width: 370px;
+    padding: 0 10px;
+    margin: 100px auto 0 auto;
+  }
+
+  .text {
+    padding: 0 10px;
+    text-align: center;
   }
 }
 
+/* PC: image and text on both sides of the timeline */
 @media screen and (min-width: 801px) {
-  .mobileView {
-    display: none;
+  .event {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cell {
+    grid-row: 1;
+    padding: 100px 0 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* the timeline line runs between the two columns */
+  .left {
+    grid-column: 1;
+    border-right: 1px solid var(--moe-blue);
+  }
+
+  .right {
+    grid-column: 2;
+    border-left: 1px solid var(--moe-blue);
+  }
+
+  .imageWrapper {
+    width: 370px;
+  }
+
+  .text {
+    margin: 0 15px;
+  }
+
+  .date {
+    grid-column: 1 / -1;
   }
 }

@@ -1,22 +1,11 @@
 .contents {
-  width: calc(100% - 244px);
-  overflow-y: scroll;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  /* keep the children's margins inside */
+  display: flow-root;
 }
 
-.contents::-webkit-scrollbar {
-  display: none;
-}
-
-@media screen and (max-width: 1149px) {
-  .contents {
-    width: 100%;
-  }
-}
-
+/* leave room for the right panel */
 @media screen and (min-width: 1150px) {
   .contents {
-    width: calc(100% - 244px);
+    width: calc(100% - var(--label-width));
   }
 }

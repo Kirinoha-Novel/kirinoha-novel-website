@@ -1,26 +1,21 @@
-import { type FC } from "react";
-import styles from "./Trial.module.css";
+import type { FC } from "react";
+import event from "@/shared/event/event.module.css";
+import { LinkButton } from "@/shared/event/LinkButton/LinkButton";
 
 export const Trial: FC = () => {
   return (
     <>
-      <h1 className={styles.title}>体験版情報</h1>
-      <p className={styles.description}>
-        「なついろにっき。」の体験板は、ブラウザゲームとして遊ぶことができます。
+      <h2 className={event.title}>体験版情報</h2>
+      <p className={event.description}>
+        「なついろにっき。」の体験版は、ブラウザゲームとして遊ぶことができます。
         <br />
         以下のリンクからアクセスして、ぜひお楽しみください！
       </p>
-      <div className={styles.linkWrapper}>
-        <a
-          href="https://natsuiro-game-trial.kirinohanovel.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.link}
-        >
-          <span>体験版「なついろにっき。」</span>
-          <span>はこちら！</span>
-        </a>
-      </div>
+      <LinkButton
+        href="https://natsuiro-game-trial.kirinohanovel.com/"
+        phrases={["体験版「なついろにっき。」", "はこちら！"]}
+        external
+      />
     </>
   );
 };

@@ -1,34 +1,21 @@
-import { useRef, type FC, type RefObject } from "react";
+import { useRef, type FC } from "react";
 import styles from "./News.module.css";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
+import { useFadeUp } from "@/shared/useFadeUp";
+import notebook from "@/shared/notebook.module.css";
 import { Info } from "./Info/Info";
-import { infoArray } from "../../../../news";
+import { infoArray } from "@/news";
 
-type Props = {
-  contentsRef: RefObject<HTMLDivElement | null>;
-};
-
-export const News: FC<Props> = (props: Props) => {
+export const News: FC = () => {
   const ulWrapper = useRef<HTMLDivElement | null>(null);
 
-  useGSAP(() => {
-    gsap.to(ulWrapper.current, {
-      opacity: 1,
-      y: -20,
-      duration: 1,
-      scrollTrigger: {
-        scroller: props.contentsRef.current,
-        trigger: ulWrapper.current,
-        start: "top center+=25%",
-        markers: false,
-      },
-    });
-  });
+  useFadeUp([ulWrapper]);
 
   return (
     <section>
-      <div className={styles.ulWrapper} ref={ulWrapper}>
+      <div
+        className={`${styles.ulWrapper} ${notebook.paper} ${notebook.tape}`}
+        ref={ulWrapper}
+      >
         <ul className={styles.ul}>
           {infoArray.map((info, index) => (
             <Info key={index} {...info} />

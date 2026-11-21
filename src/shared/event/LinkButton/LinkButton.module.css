@@ -1,0 +1,21 @@
+.wrapper {
+  width: calc(100% - 20px);
+  padding: 0 10px;
+}
+
+.link {
+  width: fit-content;
+  padding: var(--space-base);
+  margin: 60px auto var(--space-3xl) auto;
+  border-radius: 10px;
+  display: block;
+  text-align: center;
+  font-size: var(--text-xl);
+  background-color: var(--bg-color-brown);
+}
+
+/* break lines only between phrases */
+.link span {
+  display: inline-block;
+  text-decoration: underline;
+}

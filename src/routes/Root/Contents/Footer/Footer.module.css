@@ -1,15 +1,23 @@
+/* printed page footer of a notebook */
 .footer {
-  width: fit-content;
-  height: fit-content;
-  border-radius: 22px;
-  padding: 10px 20px;
+  width: calc(100% - 20px * 2);
+  max-width: 800px;
   margin: var(--space-5xl) auto var(--space-xl) auto;
   display: flex;
   align-items: center;
-  justify-content: center;
-  background-color: var(--bg-color-brown);
+  gap: var(--space-base);
+}
+
+.footer::before,
+.footer::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: var(--moe-pink-deep);
+  opacity: 0.5;
 }
 
 .copyRight {
-  font-size: var(--text-base);
+  font-size: var(--text-sm);
+  letter-spacing: 0.1em;
 }

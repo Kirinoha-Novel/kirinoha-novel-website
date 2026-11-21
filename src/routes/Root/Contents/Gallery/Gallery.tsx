@@ -1,15 +1,11 @@
-import { GalleryArray } from "../../../../gallery";
+import { GalleryArray } from "@/gallery";
 import { Work } from "./Work/Work";
 import styles from "./Gallery.module.css";
-import { useRef, type FC, type RefObject } from "react";
+import { useRef, type FC } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
-type Props = {
-  contentsRef: RefObject<HTMLDivElement | null>;
-};
-
-export const Gallery: FC<Props> = (props: Props) => {
+export const Gallery: FC = () => {
   const frame = useRef<HTMLDivElement | null>(null);
 
   useGSAP(
@@ -19,14 +15,12 @@ export const Gallery: FC<Props> = (props: Props) => {
         y: -20,
         stagger: 0.1,
         scrollTrigger: {
-          scroller: props.contentsRef.current,
           trigger: frame.current,
           start: "top center+=25%",
-          markers: false,
         },
       });
     },
-    { scope: frame }
+    { scope: frame },
   );
 
   return (

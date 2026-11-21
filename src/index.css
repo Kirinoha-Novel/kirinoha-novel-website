@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Klee One", cursive;
+  font-family: var(--font-base, "Klee One"), cursive;
   font-weight: 400;
   font-style: normal;
   color: var(--text-color);
@@ -16,17 +16,28 @@ body {
   background-color: var(--bg-color-beige);
 }
 
-section {
-  width: 100%;
-  margin: var(--space-gl) 0 0 0;
-}
-
 :root {
   --bg-color-brown: #e0d6be;
   --bg-color-beige: #f1e6dc;
   --bg-color-cream: #f9f4ec;
 
   --text-color: #7b5f47;
+
+  /* moe palette (notebook design) */
+  --moe-pink: #ffe1ec;
+  --moe-pink-deep: #f2a7c3;
+  --moe-blue: #ddeefd;
+  --moe-blue-deep: #9cc5ee;
+  --moe-lavender: #ede6ff;
+  --moe-mint: #dff6ec;
+  --moe-yellow: #fffadf;
+  --moe-line: #edf5fd;
+  --moe-tape: rgba(178, 214, 250, 0.45);
+  --moe-cover: #fdf0f5;
+  --moe-white: #ffffff;
+  --moe-text: #6a5f7a;
+  /* right panel (Label) */
+  --label-width: 244px;
 
   --text-xs: calc(1rem * 8 / 10);
   --text-sm: calc(1rem * 8 / 9);

@@ -1,5 +1,6 @@
-import { useRef, type FC } from "react";
+import type { FC } from "react";
 import styles from "./Contents.module.css";
+import notebook from "@/shared/notebook.module.css";
 import { Title } from "./Title/Title";
 import { FirstView } from "./FirstView/FirstView";
 import { Topic } from "./Topic/Topic";
@@ -11,23 +12,23 @@ import { Gallery } from "./Gallery/Gallery";
 import { Footer } from "./Footer/Footer";
 
 export const Contents: FC = () => {
-  const contents = useRef<HTMLDivElement | null>(null);
-
   return (
-    <div className={styles.contents} ref={contents}>
+    <main
+      className={`${styles.contents} ${notebook.ruled} ${notebook.marginLine}`}
+    >
       <FirstView />
-      <Title title="Topic" contentsRef={contents} />
-      <Topic contentsRef={contents} />
-      <About contentsRef={contents} />
-      <Title title="News" contentsRef={contents} />
-      <News contentsRef={contents} />
-      <Title title="Blog" contentsRef={contents} />
-      <Blog contentsRef={contents} />
-      <Title title="History" contentsRef={contents} />
-      <History contentsRef={contents} />
-      <Title title="Gallery" contentsRef={contents} />
-      <Gallery contentsRef={contents} />
+      <About />
+      <Title title="Topic" />
+      <Topic />
+      <Title title="News" />
+      <News />
+      <Title title="Blog" />
+      <Blog />
+      <Title title="History" />
+      <History />
+      <Title title="Gallery" />
+      <Gallery />
       <Footer />
-    </div>
+    </main>
   );
 };

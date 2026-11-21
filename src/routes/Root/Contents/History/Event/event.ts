@@ -1,11 +1,10 @@
-import type { RefObject } from "react";
-
 export type EventProps = {
   index: number;
   imagePath: string;
+  width: number;
+  height: number;
   title: string;
   description: string;
   date: string;
-  contentsRef: RefObject<HTMLDivElement | null>;
   url: string;
 };
