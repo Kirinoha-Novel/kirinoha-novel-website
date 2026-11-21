@@ -6,7 +6,7 @@ import { Topic } from "./Topic/Topic";
 import { About } from "./About/About";
 import { News } from "./News/News";
 import { Blog } from "./Blog/Blog";
-import { Products } from "./Products/Products";
+import { History } from "./History/History";
 import { Gallery } from "./Gallery/Gallery";
 import { Footer } from "./Footer/Footer";
 
@@ -23,8 +23,8 @@ export const Contents: FC = () => {
       <News contentsRef={contents} />
       <Title title="Blog" contentsRef={contents} />
       <Blog contentsRef={contents} />
-      <Title title="Products" contentsRef={contents} />
-      <Products contentsRef={contents} />
+      <Title title="History" contentsRef={contents} />
+      <History contentsRef={contents} />
       <Title title="Gallery" contentsRef={contents} />
       <Gallery contentsRef={contents} />
       <Footer />

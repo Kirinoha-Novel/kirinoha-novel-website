@@ -53,16 +53,22 @@ const Topic: FC<Props> = (props: Props) => {
   return (
     <section>
       <h2 className={styles.topic} ref={topic}>
-        コミックマーケット C107に出展しました！
+        「なついろにっき。」DLsite にて販売中！
       </h2>
       <p className={styles.description} ref={description}>
-        C107では、「なついろにっき。」の体験版配布カードの配布などを行いました。
-        立ち寄ってくださった皆さま、誠にありがとうございました！
+        きりのはのべる の最初の作品「なついろにっき。」は、DLsite
+        にて販売中です。
       </p>
       <div className={styles.linkWrapper}>
-        <a className={styles.link} ref={link} href="/c107">
-          <span>コミックマーケット C107&nbsp;</span>
-          <span>特設サイトはこちら！</span>
+        <a
+          className={styles.link}
+          ref={link}
+          href="https://www.dlsite.com/maniax/work/=/product_id/RJ01703526.html"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>DLsite&nbsp;</span>
+          <span>販売ページはこちら！</span>
         </a>
       </div>
     </section>

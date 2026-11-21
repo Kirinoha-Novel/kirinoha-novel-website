@@ -18,6 +18,10 @@ export const GalleryArray: GalleryProps[] = [
 */
 export const GalleryArray: GalleryProps[] = [
   {
+    imagePath: "/gallery/natsuiro-dlsite.webp",
+    style: "cover",
+  },
+  {
     imagePath: "/gallery/stella.webp",
     style: "cover",
   },
@@ -30,3 +34,4 @@ export const GalleryArray: GalleryProps[] = [
     style: "cover",
   },
 ];
+
