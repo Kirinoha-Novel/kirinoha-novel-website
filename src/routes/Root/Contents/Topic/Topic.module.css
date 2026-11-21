@@ -31,7 +31,4 @@
 .link span {
   display: inline-block;
   font-weight: 500;
-  /* make it read as a link */
-  text-decoration: underline;
-  text-underline-offset: 4px;
 }
