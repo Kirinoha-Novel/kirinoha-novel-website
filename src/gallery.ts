@@ -2,7 +2,7 @@ import type { GalleryProps } from "./routes/Root/Contents/Gallery/gallery";
 
 //* Gallery Images *//
 /*
-export const GalleryArray: GalleryProps[] = [
+export const galleryArray: GalleryProps[] = [
   # small index (New Images)
   {
     imagePath: "/gallery/natsuiro-key-visual.webp",
@@ -22,7 +22,7 @@ export const GalleryArray: GalleryProps[] = [
   },
 ]
 */
-export const GalleryArray: GalleryProps[] = [
+export const galleryArray: GalleryProps[] = [
   {
     imagePath: "/gallery/natsuiro-dlsite.webp",
     alt: "「なついろにっき。」DLsite 配信記念イラスト",

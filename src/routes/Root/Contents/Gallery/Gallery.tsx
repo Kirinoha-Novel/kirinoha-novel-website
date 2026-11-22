@@ -1,4 +1,4 @@
-import { GalleryArray } from "@/gallery";
+import { galleryArray } from "@/gallery";
 import { Work } from "./Work/Work";
 import styles from "./Gallery.module.css";
 import { useRef, type FC } from "react";
@@ -27,7 +27,7 @@ export const Gallery: FC = () => {
     <section>
       <div className={styles.gallery}>
         <div className={styles.frame} ref={frame}>
-          {GalleryArray.map((item, index) => (
+          {galleryArray.map((item, index) => (
             <div className={styles.work} data-animate="work" key={index}>
               <Work {...item} />
             </div>

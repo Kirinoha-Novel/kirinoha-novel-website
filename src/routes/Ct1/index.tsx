@@ -8,6 +8,7 @@ import { Loading } from "@/shared/event/Loading/Loading";
 import { Thanks } from "@/shared/event/Thanks/Thanks";
 import { Lineup } from "@/shared/event/Lineup/Lineup";
 import { Footer } from "@/shared/event/Footer/Footer";
+import { BackToTop } from "@/shared/event/BackToTop/BackToTop";
 import { Header } from "./Header/Header";
 import { FirstView } from "./FirstView/FirstView";
 import { Place } from "./Place/Place";
@@ -23,6 +24,7 @@ const Ct1Page: FC<Props> = (props) => {
       <title>コミックつくば | きりのはのべる</title>
       <Loading />
       <Header />
+      <BackToTop />
       <main>
         <FirstView />
         <Thanks>

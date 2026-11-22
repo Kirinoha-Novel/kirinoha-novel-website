@@ -5,7 +5,6 @@
   height: var(--ul-height);
   /* sticky note */
   background: linear-gradient(#fffcea, var(--moe-yellow));
-  rotate: -1deg;
   margin: 0 auto;
   padding: var(--space-base) 0;
   opacity: 0;
@@ -17,14 +16,13 @@
   overflow-y: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  /* fade out the end of the list well inside the note; some browsers clip
-     the scroll area of the rotated note at its bounding box */
+  /* fade out the end of the list as a hint that it scrolls */
   mask-image: linear-gradient(black calc(100% - var(--space-xl)), transparent);
   margin: 0 auto;
   padding: 0 10px var(--space-xl) 10px;
   list-style: none;
 }
 
-ul::-webkit-scrollbar {
+.ul::-webkit-scrollbar {
   display: none;
 }

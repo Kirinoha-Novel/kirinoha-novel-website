@@ -1,11 +1,12 @@
 import { useEffect, useState, type FC } from "react";
-import styles from "./Header.module.css";
+import { Link } from "react-router";
+import styles from "./BackToTop.module.css";
 
-export const Header: FC = () => {
+export const BackToTop: FC = () => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    // FirstView を半分ほど過ぎたら表示する
+    // show once the first view is half scrolled past
     const onScroll = () => {
       setVisible(window.scrollY > window.innerHeight * 0.5);
     };
@@ -15,8 +16,11 @@ export const Header: FC = () => {
   }, []);
 
   return (
-    <header className={`${styles.header} ${visible ? styles.visible : ""}`}>
-      <a className={styles.label} href="/" tabIndex={visible ? 0 : -1}>
+    <nav
+      className={`${styles.backToTop} ${visible ? styles.visible : ""}`}
+      aria-label="トップページへ戻る"
+    >
+      <Link className={styles.label} to="/">
         <span className={styles.arrow} aria-hidden="true">
           ←
         </span>
@@ -24,7 +28,7 @@ export const Header: FC = () => {
           <span className={styles.sub}>きりのはのべる</span>
           <span className={styles.main}>トップページへ戻る</span>
         </span>
-      </a>
-    </header>
+      </Link>
+    </nav>
   );
 };

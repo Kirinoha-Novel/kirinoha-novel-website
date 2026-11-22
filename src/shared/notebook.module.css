@@ -11,15 +11,10 @@
   text-decoration: none;
 }
 
-/* the page color reaches the overscroll area too */
+/* page color (see index.css) */
 html:has(.page) {
-  background-color: var(--moe-white);
+  --page-bg: var(--moe-white);
   scroll-behavior: smooth;
-}
-
-/* transparent so lines drawn behind the content stay visible */
-html:has(.page) body {
-  background-color: transparent;
 }
 
 /* ruled lines */

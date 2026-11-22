@@ -11,9 +11,10 @@
   background-color: #cfcbff;
 }
 
-html,
-body {
-  background-color: var(--bg-color-beige);
+/* page color: each page sets it with `html:has(.<page root>) { --page-bg }`
+   so it covers the whole canvas (overscroll too) and its children can use it */
+html {
+  background-color: var(--page-bg, var(--bg-color-beige));
 }
 
 :root {

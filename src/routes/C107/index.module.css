@@ -1,10 +1,11 @@
+/* page color (see index.css) */
+html:has(.container) {
+  --page-bg: var(--bg-color-beige);
+}
+
 .container {
   /* colors for the shared event components */
-  --page-bg: var(--bg-color-beige);
   --footer-bg: var(--bg-color-brown);
   --item-bg: var(--bg-color-cream);
-  height: auto;
-  width: 100%;
   padding: 0 0 50px 0;
-  background-color: var(--page-bg);
 }

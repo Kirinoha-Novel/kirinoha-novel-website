@@ -8,7 +8,7 @@ import { Loading } from "@/shared/event/Loading/Loading";
 import { Thanks } from "@/shared/event/Thanks/Thanks";
 import { Lineup } from "@/shared/event/Lineup/Lineup";
 import { Footer } from "@/shared/event/Footer/Footer";
-import { Header } from "./Header/Header";
+import { BackToTop } from "@/shared/event/BackToTop/BackToTop";
 import { FirstView } from "./FirstView/FirstView";
 import { Topic } from "./Topic/Topic";
 import { Info } from "./Info/Info";
@@ -24,7 +24,7 @@ const C107Page: FC<Props> = (props) => {
     <div className={styles.container}>
       <title>コミックマーケット107 | きりのはのべる</title>
       <Loading />
-      <Header />
+      <BackToTop />
       <main>
         <FirstView />
         <Thanks>

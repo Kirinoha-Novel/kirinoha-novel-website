@@ -5,6 +5,7 @@ import notebook from "@/shared/notebook.module.css";
 
 type Props = {
   title: string;
+  id: string;
 };
 
 export const Title: FC<Props> = (props: Props) => {
@@ -15,7 +16,7 @@ export const Title: FC<Props> = (props: Props) => {
   return (
     <h2
       className={`${styles.title} ${notebook.marker}`}
-      id={props.title.toLowerCase()}
+      id={props.id}
       ref={title}
     >
       {props.title}

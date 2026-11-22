@@ -9,7 +9,6 @@ export const Loading: FC = () => {
     const element = overlay.current;
     if (!element) return;
 
-    // フェードアウトアニメーション
     const fadeOut = () => {
       gsap.to(element, {
         opacity: 0,
@@ -20,7 +19,7 @@ export const Loading: FC = () => {
       });
     };
 
-    // すでにロード済みなら即実行
+    // already loaded (e.g. opened from another page of this site): fade out now
     if (document.readyState === "complete") {
       fadeOut();
     } else {

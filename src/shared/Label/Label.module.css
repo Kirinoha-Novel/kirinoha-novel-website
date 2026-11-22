@@ -51,6 +51,10 @@
   background-color: var(--moe-lavender);
 }
 
+.tab:nth-child(6) {
+  background-color: var(--moe-pink);
+}
+
 /* stickers on the inside cover */
 .logoSticker,
 .photoSticker,
@@ -59,9 +63,11 @@
   height: auto;
 }
 
-/* die-cut edge following the transparent logo shape */
+/* die-cut edge following the transparent logo shape
+   (the max() keeps the stickers clear of the 6 tabs of the top page on short
+   screens; raise the values when adding tabs) */
 .logoSticker {
-  top: 40%;
+  top: max(40%, 360px);
   left: 50%;
   width: 180px;
   translate: -50% 0;
@@ -74,7 +80,7 @@
 }
 
 .photoSticker {
-  top: 60%;
+  top: max(60%, 490px);
   right: 10%;
   width: 150px;
   --sticker-edge: 8px;
@@ -83,7 +89,7 @@
 }
 
 .iconSticker {
-  top: 80%;
+  top: max(80%, 660px);
   left: 12%;
   width: 128px;
   border-radius: 50%;

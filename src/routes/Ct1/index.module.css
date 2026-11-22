@@ -1,11 +1,13 @@
-.container {
-  /* colors for the shared event components */
+/* page color (see index.css) */
+html:has(.container) {
   --page-bg: #ffffff;
+}
+
+.container {
   /* shared by Header and FirstView */
   --header-height: 70px;
-  height: auto;
-  width: 100%;
+  /* colors for the shared event components */
+  --back-to-top-bg: #ffffff;
   padding: 0 0 50px 0;
-  background-color: var(--page-bg);
   overflow-x: hidden;
 }

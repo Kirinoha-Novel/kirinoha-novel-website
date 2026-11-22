@@ -2,11 +2,13 @@ import type { FC } from "react";
 import notebook from "@/shared/notebook.module.css";
 import { Label } from "@/shared/Label/Label";
 import { Contents } from "./Contents/Contents";
+import { sectionId, sections } from "./Contents/sections";
 import { Cursor } from "@/shared/Cursor/Cursor";
 
-const tabs = ["Topic", "News", "Blog", "History", "Gallery"].map((tab) => ({
-  label: tab,
-  href: `#${tab.toLowerCase()}`,
+// the tabs jump to the section titles
+const tabs = sections.map(({ title }) => ({
+  label: title,
+  href: `#${sectionId(title)}`,
 }));
 
 const Root: FC = () => {
