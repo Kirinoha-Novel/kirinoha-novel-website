@@ -1,47 +1,40 @@
-import { useRef, type FC, type RefObject } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
+import { useRef, type FC } from "react";
+import { BsGithub, BsTwitterX } from "react-icons/bs";
 import styles from "./About.module.css";
-import circleLogo from "../../assets/logo.webp";
+import { useFadeUp } from "@/shared/useFadeUp";
+import notebook from "@/shared/notebook.module.css";
 
-type Props = {
-  contentsRef: RefObject<HTMLDivElement | null>;
-};
-
-const About: FC<Props> = (props: Props) => {
-  const logoWrapper = useRef<HTMLDivElement | null>(null);
+const About: FC = () => {
+  const photo = useRef<HTMLDivElement | null>(null);
   const description = useRef<HTMLParagraphElement | null>(null);
 
-  useGSAP(() => {
-    gsap.to(logoWrapper.current, {
-      opacity: 1,
-      y: -20,
-      duration: 1,
-      scrollTrigger: {
-        scroller: props.contentsRef.current,
-        trigger: logoWrapper.current,
-        start: "top center+=25%",
-        markers: false,
-      },
-    });
-
-    gsap.to(description.current, {
-      opacity: 1,
-      y: -20,
-      duration: 1,
-      scrollTrigger: {
-        scroller: props.contentsRef.current,
-        trigger: description.current,
-        start: "top center+=25%",
-        markers: false,
-      },
-    });
-  });
+  useFadeUp([photo, description]);
 
   return (
     <section>
-      <div className={styles.logoWrapper} ref={logoWrapper}>
-        <img className={styles.logo} src={circleLogo} alt="circle logo" />
+      <div className={styles.photoWrapper} ref={photo}>
+        <img
+          className={styles.photo}
+          src="/gallery/establish.webp"
+          width={2508}
+          height={2508}
+          alt="きりのはのべる 発足"
+        />
+        {/* SNS stickers */}
+        <a
+          className={`${styles.sticker} ${notebook.sticker}`}
+          href="https://x.com/kirinohanovel/"
+          aria-label="X"
+        >
+          <BsTwitterX className={styles.stickerIcon} />
+        </a>
+        <a
+          className={`${styles.sticker} ${notebook.sticker}`}
+          href="https://github.com/Kirinoha-Novel/"
+          aria-label="GitHub"
+        >
+          <BsGithub className={styles.stickerIcon} />
+        </a>
       </div>
       <div className={styles.descriptionWrapper}>
         <p className={styles.description} ref={description}>

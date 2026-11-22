@@ -1,33 +1,25 @@
-import { useRef, type FC, type RefObject } from "react";
+import { useRef, type FC } from "react";
 import styles from "./Title.module.css";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
+import { useFadeUp } from "@/shared/useFadeUp";
+import notebook from "@/shared/notebook.module.css";
 
 type Props = {
   title: string;
-  contentsRef: RefObject<HTMLDivElement | null>;
+  id: string;
 };
 
 export const Title: FC<Props> = (props: Props) => {
   const title = useRef<HTMLHeadingElement | null>(null);
 
-  useGSAP(() => {
-    gsap.to(title.current, {
-      opacity: 1,
-      y: -20,
-      duration: 1,
-      scrollTrigger: {
-        scroller: props.contentsRef.current,
-        trigger: title.current,
-        start: "top center+=25%",
-        markers: false,
-      },
-    });
-  });
+  useFadeUp([title]);
 
   return (
-    <h1 className={styles.title} ref={title}>
+    <h2
+      className={`${styles.title} ${notebook.marker}`}
+      id={props.id}
+      ref={title}
+    >
       {props.title}
-    </h1>
+    </h2>
   );
 };

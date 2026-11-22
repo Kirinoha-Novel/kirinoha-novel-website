@@ -1,10 +1,11 @@
-import { type FC } from "react";
+import type { FC } from "react";
 import styles from "./Info.module.css";
+import event from "@/shared/event/event.module.css";
 
 export const Info: FC = () => {
   return (
     <>
-      <h1 className={styles.title}>出展情報</h1>
+      <h2 className={event.title}>出展情報</h2>
       <div className={styles.box}>
         <p className={styles.subTitle}>- サークル名 -</p>
         <p className={styles.description}>きりのはのべる</p>

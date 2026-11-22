@@ -3,17 +3,19 @@
   max-width: 250px;
   max-height: 250px;
   overflow: hidden;
-  border-radius: 10px;
+  --sticker-edge: 12px;
+  border-radius: 22px;
 }
 
-.imageCover {
+.imageCover,
+.imageContain {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 10px;
 }
 
 .imageContain {
-  width: 100%;
-  height: 100%;
   object-fit: contain;
 }

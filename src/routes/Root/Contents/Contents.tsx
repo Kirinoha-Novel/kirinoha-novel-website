@@ -1,33 +1,26 @@
-import { useRef, type FC } from "react";
+import { Fragment, type FC } from "react";
 import styles from "./Contents.module.css";
+import notebook from "@/shared/notebook.module.css";
 import { Title } from "./Title/Title";
 import { FirstView } from "./FirstView/FirstView";
-import { Topic } from "./Topic/Topic";
 import { About } from "./About/About";
-import { News } from "./News/News";
-import { Blog } from "./Blog/Blog";
-import { History } from "./History/History";
-import { Gallery } from "./Gallery/Gallery";
 import { Footer } from "./Footer/Footer";
+import { sectionId, sections } from "./sections";
 
 export const Contents: FC = () => {
-  const contents = useRef<HTMLDivElement | null>(null);
-
   return (
-    <div className={styles.contents} ref={contents}>
+    <main
+      className={`${styles.contents} ${notebook.ruled} ${notebook.marginLine}`}
+    >
       <FirstView />
-      <Title title="Topic" contentsRef={contents} />
-      <Topic contentsRef={contents} />
-      <About contentsRef={contents} />
-      <Title title="News" contentsRef={contents} />
-      <News contentsRef={contents} />
-      <Title title="Blog" contentsRef={contents} />
-      <Blog contentsRef={contents} />
-      <Title title="History" contentsRef={contents} />
-      <History contentsRef={contents} />
-      <Title title="Gallery" contentsRef={contents} />
-      <Gallery contentsRef={contents} />
+      <About />
+      {sections.map(({ title, Section }) => (
+        <Fragment key={title}>
+          <Title title={title} id={sectionId(title)} />
+          <Section />
+        </Fragment>
+      ))}
       <Footer />
-    </div>
+    </main>
   );
 };

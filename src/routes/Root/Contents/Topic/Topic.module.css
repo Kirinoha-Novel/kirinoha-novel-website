@@ -1,7 +1,9 @@
 .topic {
   opacity: 0;
   text-align: center;
+  font-weight: 500;
   font-size: var(--text-3xl);
+  color: var(--moe-pink-deep);
   margin: 0 0 var(--space-base) 0;
 }
 
@@ -20,18 +22,13 @@
 }
 
 .link {
-  width: fit-content;
-  padding: var(--space-base);
   margin: 0 auto var(--space-3xl) auto;
-  border-radius: 10px;
-  display: block;
   opacity: 0;
   text-align: center;
   font-size: var(--text-xl);
-  background-color: var(--bg-color-brown);
 }
 
-span {
+.link span {
   display: inline-block;
-  text-decoration: underline;
+  font-weight: 500;
 }

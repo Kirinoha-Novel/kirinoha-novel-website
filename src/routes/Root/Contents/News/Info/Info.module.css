@@ -1,19 +1,17 @@
 .li {
-  width: 100%;
   margin: var(--space-base) 0 0 0;
   font-size: var(--text-xl);
-  border-bottom: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--moe-pink);
 }
 
 .date {
+  font-weight: 500;
   font-size: var(--text-base);
   display: inline-block;
   margin: 0 20px 0 0;
-  text-decoration: none;
 }
 
 .content {
   font-size: var(--text-lg);
   display: inline-block;
-  text-decoration: none;
 }

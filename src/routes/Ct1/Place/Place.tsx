@@ -4,6 +4,7 @@ import {
   type ScrollPosition,
 } from "react-lazy-load-image-component";
 import styles from "./Place.module.css";
+import event from "@/shared/event/event.module.css";
 import placeImage from "../assets/place.webp";
 
 type Props = {
@@ -13,8 +14,8 @@ type Props = {
 export const Place: FC<Props> = (props) => {
   return (
     <>
-      <h1 className={styles.title}>Place</h1>
-      <h2 className={styles.description}>3A416 No.9</h2>
+      <h2 className={event.title}>Place</h2>
+      <h3 className={styles.description}>3A416 No.9</h3>
       <p className={styles.subDescription}>University of Tsukuba</p>
       <div className={styles.imageBox}>
         <LazyLoadImage

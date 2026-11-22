@@ -1,0 +1,138 @@
+/* shared notebook design (import alongside each component's own styles) */
+
+/* page base: font, text color and white paper */
+.page {
+  --text-color: var(--moe-text);
+  --font-base: "Kiwi Maru";
+}
+
+/* no underlined links */
+.page a {
+  text-decoration: none;
+}
+
+/* page color (see index.css) */
+html:has(.page) {
+  --page-bg: var(--moe-white);
+  scroll-behavior: smooth;
+}
+
+/* ruled lines */
+.ruled {
+  background-image: linear-gradient(
+    transparent calc(100% - 1px),
+    var(--moe-line) 1px
+  );
+  background-size: 100% 36px;
+}
+
+/* margin line (PC only: it overlaps text on mobile) */
+@media (min-width: 1150px) {
+  .marginLine {
+    position: relative;
+  }
+
+  .marginLine::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 56px;
+    width: 2px;
+    z-index: -1;
+    background-color: var(--moe-pink);
+  }
+}
+
+/* spiral binding along the left edge of the page */
+.rings {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -6px;
+  width: 52px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='52' height='34'%3E%3Ccircle cx='40' cy='20' r='4.5' fill='%23ddd5e8'/%3E%3Cpath d='M40 20 C40 4 6 4 6 20' fill='none' stroke='%23c9bedb' stroke-width='3.5' stroke-linecap='round'/%3E%3Cpath d='M36 12 C30 7 16 7 10 12' fill='none' stroke='%23ffffff' stroke-width='1.2' stroke-linecap='round' opacity='0.8'/%3E%3C/svg%3E")
+    0 4px / 52px 34px repeat-y;
+  pointer-events: none;
+}
+
+@media (max-width: 1149px) {
+  .rings {
+    display: none;
+  }
+}
+
+/* highlighter */
+.marker {
+  text-decoration: underline;
+  text-decoration-color: var(--marker-color, var(--moe-pink));
+  text-decoration-thickness: 0.45em;
+  text-decoration-skip-ink: none;
+  text-underline-offset: -0.3em;
+}
+
+/* pastel pill button */
+.pill {
+  display: block;
+  width: fit-content;
+  padding: var(--space-sm) var(--space-xl);
+  border-radius: 999px;
+  background-color: var(--moe-pink);
+}
+
+/* underlined so it reads as a link: `a.pill` comes after `.page a` in this
+   file so it wins, and inline-block spans need their own underline */
+a.pill,
+.pill span {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* a piece of paper lying on the page (lifted bottom edge) */
+.paper {
+  border-radius: 2px;
+  box-shadow:
+    0 1px 1px rgba(106, 95, 122, 0.08),
+    0 12px 12px -10px rgba(106, 95, 122, 0.3);
+}
+
+/* masking tape stuck on the top edge */
+.tape {
+  position: relative;
+}
+
+.tape::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  width: 120px;
+  height: 24px;
+  translate: -50% 0;
+  rotate: -3deg;
+  background-color: var(--moe-tape);
+  /* torn edges on both ends */
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    97% 20%,
+    100% 40%,
+    97% 60%,
+    100% 80%,
+    97% 100%,
+    0 100%,
+    3% 80%,
+    0 60%,
+    3% 40%,
+    0 20%
+  );
+}
+
+/* die-cut sticker: white edge and a hard shadow */
+.sticker {
+  box-sizing: border-box;
+  border: var(--sticker-edge, 6px) solid var(--moe-white);
+  box-shadow:
+    0 0 0 1px rgba(106, 95, 122, 0.12),
+    0 3px 0 rgba(106, 95, 122, 0.14);
+}

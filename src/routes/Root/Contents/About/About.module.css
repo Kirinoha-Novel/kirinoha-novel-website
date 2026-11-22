@@ -1,17 +1,83 @@
-.logoWrapper {
-  margin: 0 auto;
-  width: 200px;
+.photoWrapper {
+  position: relative;
+  width: 240px;
+  margin: var(--space-2xl) auto 0 auto;
   opacity: 0;
 }
 
-.logo {
-  margin: 50px 0 0 0;
+/* blue glue stick peeking out from under the photo */
+.photoWrapper::before {
+  content: "";
+  position: absolute;
+  inset: -5px -9px -7px -4px;
+  z-index: -1;
+  rotate: -2deg;
+  border-radius: 46% 54% 40% 60% / 8% 12% 10% 6%;
+  background:
+    repeating-linear-gradient(
+      -8deg,
+      rgba(255, 255, 255, 0.35) 0 3px,
+      transparent 3px 9px
+    ),
+    rgba(150, 196, 255, 0.4);
+}
+
+/* photo glued flat with a glue stick */
+.photo {
+  display: block;
   width: 100%;
   height: auto;
+  box-sizing: border-box;
+  border: 8px solid var(--moe-white);
+  box-shadow:
+    0 0 0 1px rgba(106, 95, 122, 0.08),
+    0 1px 1px rgba(106, 95, 122, 0.12);
+  rotate: -4deg;
+}
+
+/* die-cut round SNS stickers */
+.sticker {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  --sticker-edge: 5px;
+  border-radius: 50%;
+}
+
+.sticker:nth-of-type(1) {
+  right: 8px;
+  bottom: -24px;
+  background-color: var(--moe-blue);
+  rotate: -10deg;
+}
+
+.sticker:nth-of-type(2) {
+  right: -56px;
+  bottom: -10px;
+  background-color: var(--moe-lavender);
+  rotate: 8deg;
+}
+
+/* keep the stickers on screen on very narrow phones */
+@media screen and (max-width: 359px) {
+  .sticker:nth-of-type(1) {
+    right: 56px;
+  }
+
+  .sticker:nth-of-type(2) {
+    right: -8px;
+  }
+}
+
+.stickerIcon {
+  width: 26px;
+  height: 26px;
 }
 
 .descriptionWrapper {
-  width: 100%;
   max-width: 800px;
   margin: var(--space-xl) auto 0 auto;
 }

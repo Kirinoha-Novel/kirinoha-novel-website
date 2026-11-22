@@ -1,0 +1,103 @@
+.label {
+  background-color: var(--moe-cover);
+  width: var(--label-width);
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  padding: var(--space-xl) 0 0 0;
+  box-sizing: border-box;
+}
+
+/* index tabs (stick out from the page edge) */
+.tabs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.tab {
+  width: 140px;
+  padding: var(--space-xs) var(--space-base);
+  border-radius: 0 12px 12px 0;
+  font-weight: 500;
+  font-size: var(--text-base);
+  letter-spacing: 0.08em;
+  transition: padding 0.2s ease;
+}
+
+/* grow to the right (text moves with it) while staying attached to the page */
+.tab[href]:hover {
+  padding-left: calc(var(--space-base) + 12px);
+}
+
+.tab:nth-child(1) {
+  background-color: var(--moe-pink);
+}
+
+.tab:nth-child(2) {
+  background-color: var(--moe-yellow);
+}
+
+.tab:nth-child(3) {
+  background-color: var(--moe-mint);
+}
+
+.tab:nth-child(4) {
+  background-color: var(--moe-blue);
+}
+
+.tab:nth-child(5) {
+  background-color: var(--moe-lavender);
+}
+
+.tab:nth-child(6) {
+  background-color: var(--moe-pink);
+}
+
+/* stickers on the inside cover */
+.logoSticker,
+.photoSticker,
+.iconSticker {
+  position: absolute;
+  height: auto;
+}
+
+/* die-cut edge following the transparent logo shape
+   (the max() keeps the stickers clear of the 6 tabs of the top page on short
+   screens; raise the values when adding tabs) */
+.logoSticker {
+  top: max(40%, 360px);
+  left: 50%;
+  width: 180px;
+  translate: -50% 0;
+  rotate: -6deg;
+  filter: drop-shadow(3px 0 0 var(--moe-white))
+    drop-shadow(-3px 0 0 var(--moe-white)) drop-shadow(0 3px 0 var(--moe-white))
+    drop-shadow(0 -3px 0 var(--moe-white))
+    drop-shadow(0 0 0.5px rgba(106, 95, 122, 0.35))
+    drop-shadow(0 3px 0 rgba(106, 95, 122, 0.14));
+}
+
+.photoSticker {
+  top: max(60%, 490px);
+  right: 10%;
+  width: 150px;
+  --sticker-edge: 8px;
+  border-radius: 16px;
+  rotate: 7deg;
+}
+
+.iconSticker {
+  top: max(80%, 660px);
+  left: 12%;
+  width: 128px;
+  border-radius: 50%;
+  rotate: -10deg;
+}
+
+@media (max-width: 1149px) {
+  .label {
+    display: none;
+  }
+}

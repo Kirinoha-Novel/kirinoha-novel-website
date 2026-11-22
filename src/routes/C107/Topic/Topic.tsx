@@ -1,22 +1,20 @@
-import { type FC } from "react";
-import styles from "./Topic.module.css";
+import type { FC } from "react";
+import event from "@/shared/event/event.module.css";
+import { LinkButton } from "@/shared/event/LinkButton/LinkButton";
 
 export const Topic: FC = () => {
   return (
     <>
-      <h1 className={styles.title}>メッセージ</h1>
-      <p className={styles.description}>
+      <h2 className={event.title}>メッセージ</h2>
+      <p className={event.description}>
         コミックマーケット107では、きりのはのべる初の新作ノベルゲーム
-        「なついろにっき。」の体験版を紹介します。
-        また、「なついろにっき。」に関する関連グッズも販売予定です。
-        ぜひ当サークルブースにお立ち寄りください！
+        「なついろにっき。」の体験版を紹介しました。
+        また、「なついろにっき。」に関する関連グッズも販売しました。
       </p>
-      <div className={styles.linkWrapper}>
-        <a href="https://natsuiro.kirinohanovel.com/" className={styles.link}>
-          <span>「なついろにっき。」</span>
-          <span>公式サイトはこちら！</span>
-        </a>
-      </div>
+      <LinkButton
+        href="https://natsuiro.kirinohanovel.com/"
+        phrases={["「なついろにっき。」", "公式サイトはこちら！"]}
+      />
     </>
   );
 };

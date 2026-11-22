@@ -1,21 +1,12 @@
-import type { FC, RefObject } from "react";
+import type { FC } from "react";
 import { Event } from "./Event/Event";
-import { historyArray } from "../../../../history";
+import { historyArray } from "@/history";
 
-type Props = {
-  contentsRef: RefObject<HTMLDivElement | null>;
-};
-
-export const History: FC<Props> = (props: Props) => {
+export const History: FC = () => {
   return (
     <section>
       {historyArray.map((event, index) => (
-        <Event
-          key={index}
-          index={index}
-          {...event}
-          contentsRef={props.contentsRef}
-        />
+        <Event key={index} index={index} {...event} />
       ))}
     </section>
   );

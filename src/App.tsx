@@ -1,52 +1,20 @@
-import { useRef, type FC } from "react";
+import type { FC } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
 import { NotFound, Root, Ct1, C107 } from "./routes";
-import styles from "./App.module.css";
+import { ScrollToTopOnNavigate } from "@/shared/ScrollToTopOnNavigate/ScrollToTopOnNavigate";
 
 const App: FC = () => {
-  const container = useRef<HTMLDivElement | null>(null);
-  const xTo = useRef<gsap.QuickToFunc | null>(null);
-  const yTo = useRef<gsap.QuickToFunc | null>(null);
-
-  const { contextSafe } = useGSAP(
-    () => {
-      xTo.current = gsap.quickTo("[data-animate='cursor']", "x", {
-        duration: 0.5,
-        ease: "power3",
-      });
-      yTo.current = gsap.quickTo("[data-animate='cursor']", "y", {
-        duration: 0.5,
-        ease: "power3",
-      });
-    },
-    { scope: container }
-  );
-
-  const moveCursor = contextSafe((e: React.MouseEvent<HTMLDivElement>) => {
-    if (xTo.current && yTo.current) {
-      xTo.current(e.clientX);
-      yTo.current(e.clientY);
-    }
-  });
-
   return (
     <Router>
-      <div
-        ref={container}
-        onMouseMove={(e: React.MouseEvent<HTMLDivElement>) => moveCursor(e)}
-      >
-        <div data-animate="cursor" className={styles.cursor} />
-        <Routes>
-          <Route path="/" element={<Root />} />
-          {/* /comitsuku2025 is a deprecated path (now active /ct1) */}
-          <Route path="/comitsuku2025" element={<Ct1 />} />
-          <Route path="/ct1" element={<Ct1 />} />
-          <Route path="/c107" element={<C107 />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </div>
+      <ScrollToTopOnNavigate />
+      <Routes>
+        <Route path="/" element={<Root />} />
+        {/* /comitsuku2025 is a deprecated path (now active /ct1) */}
+        <Route path="/comitsuku2025" element={<Ct1 />} />
+        <Route path="/ct1" element={<Ct1 />} />
+        <Route path="/c107" element={<C107 />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </Router>
   );
 };

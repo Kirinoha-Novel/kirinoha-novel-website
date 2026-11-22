@@ -1,0 +1,72 @@
+/* 250px tiles like the gallery, centered and wrapped */
+.frame {
+  max-width: 1048px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* sticker and marker colors alternate: red / pink, yellow / blue */
+.item {
+  --sticker-color: #e8383d;
+  --sticker-stroke: #5a1f2a;
+  --marker-color: var(--moe-pink);
+  /* grows with a long subtitle, up to the screen width */
+  min-width: 250px;
+  max-width: 100%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-base);
+  opacity: 0;
+}
+
+.item:nth-child(even) {
+  --sticker-color: #ffd23f;
+  --sticker-stroke: #2d4fa3;
+  --marker-color: var(--moe-blue);
+}
+
+/* POP lettering cut out as a sticker: thick white edge and a hard shadow */
+.sticker {
+  /* the padding makes the white edge clickable too */
+  padding: 0.12em;
+  font-family: "Dela Gothic One", sans-serif;
+  font-size: 4.5rem;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--sticker-color);
+  -webkit-text-stroke: 0.035em var(--sticker-stroke);
+  /* white die-cut edge around the letters */
+  text-shadow:
+    0.12em 0 0 var(--moe-white),
+    -0.12em 0 0 var(--moe-white),
+    0 0.12em 0 var(--moe-white),
+    0 -0.12em 0 var(--moe-white),
+    0.085em 0.085em 0 var(--moe-white),
+    -0.085em 0.085em 0 var(--moe-white),
+    0.085em -0.085em 0 var(--moe-white),
+    -0.085em -0.085em 0 var(--moe-white),
+    0.11em 0.046em 0 var(--moe-white),
+    -0.11em 0.046em 0 var(--moe-white),
+    0.11em -0.046em 0 var(--moe-white),
+    -0.11em -0.046em 0 var(--moe-white),
+    0.046em 0.11em 0 var(--moe-white),
+    -0.046em 0.11em 0 var(--moe-white),
+    0.046em -0.11em 0 var(--moe-white),
+    -0.046em -0.11em 0 var(--moe-white);
+  filter: drop-shadow(0 0 0.5px rgba(106, 95, 122, 0.35))
+    drop-shadow(0 3px 0 rgba(106, 95, 122, 0.18));
+}
+
+/* written straight onto the page and highlighted like the titles */
+.caption {
+  font-size: var(--text-xl);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-align: center;
+}

@@ -6,6 +6,8 @@ export const historyArray: HistoryProps[] = [
   # small index (New Information)
   {
     imagePath: "/history/natsuiro.webp",
+    width: 1449,
+    height: 2048,
     title: "なついろにっき。",
     description:
       "きりのはのべるの最初の作品「なついろにっき。」を公開しました。",
@@ -15,6 +17,8 @@ export const historyArray: HistoryProps[] = [
   # large index (Old Information)
   {
     imagePath: "/history/establish.webp",
+    width: 2508,
+    height: 2508,
     title: "きりのはのべる 発足",
     description: "きりのはのべるが発足しました。",
     date: "2025/07/16",
@@ -24,6 +28,8 @@ export const historyArray: HistoryProps[] = [
 export const historyArray: HistoryProps[] = [
   {
     imagePath: "/history/dlsite.webp",
+    width: 560,
+    height: 420,
     title: "なついろにっき。販売開始",
     description: "「なついろにっき。」の DLsite での販売を開始。",
     date: "2026/08/30",
@@ -31,17 +37,21 @@ export const historyArray: HistoryProps[] = [
   },
   {
     imagePath: "/history/natsuiro.webp",
+    width: 1449,
+    height: 2048,
     title: "なついろにっき。",
-    description: "きりのはのべる の最初の作品「なついろにっき。」の制作が開始。",
+    description:
+      "きりのはのべる の最初の作品「なついろにっき。」の制作が開始。",
     date: "2025/08/24",
     url: "https://natsuiro.kirinohanovel.com",
   },
   {
     imagePath: "/history/establish.webp",
+    width: 2508,
+    height: 2508,
     title: "きりのはのべる 発足",
     description: "きりのはのべる が発足。",
     date: "2025/07/16",
     url: "https://kirinohanovel.com",
   },
 ];
-
